@@ -45,11 +45,11 @@ def ques():
 
     dictionary = corpora.Dictionary(texts)
     corpus = [dictionary.doc2bow(text) for text in texts]
-    # from gensim import models
-    # lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=5)
-    # doc = "Human machine interface for lab abc computer applications Human computer interaction"
-    # vec_bow = dictionary.doc2bow(doc.lower().split())
-    # vec_lsi = lsi[vec_bow]  # convert the query to LSI space
+    from gensim import models
+    lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=5)
+    doc = "Human machine interface for lab abc computer applications Human computer interaction"
+    vec_bow = dictionary.doc2bow(doc.lower().split())
+    vec_lsi = lsi[vec_bow]  # convert the query to LSI space
     # # print(vec_lsi)
     # from gensim import similarities
     # index = similarities.MatrixSimilarity(lsi[corpus])  # transform corpus to LSI space and index it
