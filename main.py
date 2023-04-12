@@ -50,12 +50,12 @@ def ques():
     doc = "Human machine interface for lab abc computer applications Human computer interaction"
     vec_bow = dictionary.doc2bow(doc.lower().split())
     vec_lsi = lsi[vec_bow]  # convert the query to LSI space
-    # # print(vec_lsi)
-    # from gensim import similarities
-    # index = similarities.MatrixSimilarity(lsi[corpus])  # transform corpus to LSI space and index it
-    # sims = index[vec_lsi]  # perform a similarity query against the corpus
-    # return jsonify(list(enumerate(sims)))  # print (document_number, document_similarity) 2-tuples
-    return render_template("index.html")
+    # print(vec_lsi)
+    from gensim import similarities
+    index = similarities.MatrixSimilarity(lsi[corpus])  # transform corpus to LSI space and index it
+    sims = index[vec_lsi]  # perform a similarity query against the corpus
+    return jsonify(list(enumerate(sims)))  # print (document_number, document_similarity) 2-tuples
+    # return render_template("index.html")
 
 
 if __name__ == "__main__":
