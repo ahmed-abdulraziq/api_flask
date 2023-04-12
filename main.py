@@ -1,6 +1,6 @@
 
 
-from flask import Flask, render_template, request, url_for, jsonify
+from flask import Flask, render_template, request, url_for, jsonify, json
 
 app = Flask(__name__)
 
@@ -50,7 +50,7 @@ def ques():
     doc = "Human machine interface for lab abc computer applications Human computer interaction"
     vec_bow = dictionary.doc2bow(doc.lower().split())
     vec_lsi = lsi[vec_bow]  # convert the query to LSI space
-    # print(vec_lsi)
+    print(vec_lsi)
     from gensim import similarities
     index = similarities.MatrixSimilarity(lsi[corpus])  # transform corpus to LSI space and index it
     sims = index[vec_lsi]  # perform a similarity query against the corpus
