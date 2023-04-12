@@ -38,13 +38,13 @@ def ques():
         for token in text:
             frequency[token] += 1
 
-    # texts = [
-    #     [token for token in text if frequency[token] > 1]
-    #     for text in texts
-    # ]
+    texts = [
+        [token for token in text if frequency[token] > 1]
+        for text in texts
+    ]
 
-    # dictionary = corpora.Dictionary(texts)
-    # corpus = [dictionary.doc2bow(text) for text in texts]
+    dictionary = corpora.Dictionary(texts)
+    corpus = [dictionary.doc2bow(text) for text in texts]
     # from gensim import models
     # lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=5)
     # doc = "Human machine interface for lab abc computer applications Human computer interaction"
