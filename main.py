@@ -9,7 +9,7 @@ def room():
     request.json["name"]
     return render_template("index.html")
 
-@app.route("/ques", methods=['POST'])
+@app.route("/ques")
 def ques():
     from collections import defaultdict
     from gensim import corpora
