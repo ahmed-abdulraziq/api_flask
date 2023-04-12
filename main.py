@@ -54,7 +54,8 @@ def ques():
     from gensim import similarities
     index = similarities.MatrixSimilarity(lsi[corpus])  # transform corpus to LSI space and index it
     sims = index[vec_lsi]  # perform a similarity query against the corpus
-    return jsonify({"ahmed": [sim for sim in sims]}) # print (document_number, document_similarity) 2-tuples
+    e = [sim for sim in sims]
+    return jsonify({"ahmed": e}) # print (document_number, document_similarity) 2-tuples
     # return render_template("index.html")
 
 
