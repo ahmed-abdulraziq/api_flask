@@ -60,7 +60,7 @@ def ques():
 
     translator = Translator()
 
-    return jsonify({t: f"{translator.translate('مرحبا', dest='en').text}"})
+    return jsonify({"translate": f"{translator.translate('مرحبا', dest='en').text}"})
 
 
 if __name__ == "__main__":
