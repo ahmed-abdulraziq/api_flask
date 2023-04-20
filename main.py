@@ -1,6 +1,4 @@
-
-
-from flask import Flask, render_template, request, url_for, jsonify, json
+from flask import Flask, render_template, request, url_for, jsonify, Response, make_response
 
 app = Flask(__name__)
 
@@ -8,60 +6,70 @@ app = Flask(__name__)
 def room():
     return render_template("index.html")
 
-@app.route("/ques")
+@app.route("/ques", methods={"post"})
 def ques():
-    from collections import defaultdict
-    from gensim import corpora
+    # from collections import defaultdict
+    # from gensim import corpora
+    # from googletrans import Translator
 
-    documents = [
-        "Human machine interface for lab abc computer applications",
-        "A survey of user opinion of computer system response time",
-        "The EPS user interface management system",
-        "System and human system engineering testing of EPS",
-        "Relation of user perceived response time to error measurement",
-        "The generation of random binary unordered trees",
-        "The intersection graph of paths in trees",
-        "Graph minors IV Widths of trees and well quasi ordering",
-        "Graph minors A survey",
-    ]
+    # translator = Translator()
 
-    # remove common words and tokenize
-    stoplist = set('for a of the and to in'.split())
-    texts = [
-        [word for word in document.lower().split()]
-        for document in documents
-    ]
+    # documents = [
+    #     "واجهة الإنسان و الآلة لتطبيقات الكمبيوتر المعملية ABC",
+    #     "استطلاع رأي المستخدم بشأن زمن استجابة نظام الكمبيوتر",
+    #     "نظام إدارة واجهة المستخدم EPS",
+    #     "اختبار هندسة النظم و الأنظمة البشرية لـ EPS",
+    #     "علاقة وقت الاستجابة المدرك للمستخدم بقياس الخطأ",
+    #     "توليد أشجار ثنائية عشوائية غير مرتبة",
+    #     "رسم تقاطع المسارات في الأشجار",
+    #     "رسم بياني القصر الرابع عرض الأشجار و شبه الترتيب جيدًا",
+    #     "رسم بياني قاصرين مسح",
+    # ]
 
-    # remove words that appear only once
-    frequency = defaultdict(int)
-    for text in texts:
-        for token in text:
-            frequency[token] += 1
+    # documents = [
+    #     translator.translate(document, dest='en').text
+    #     for document in documents
+    # ]
 
-    texts = [
-        [token for token in text if frequency[token] > 1]
-        for text in texts
-    ]
+    # # remove common words and tokenize
+    # stoplist = set('for a of the and to in'.split())
+    # texts = [
+    #     [word for word in document.lower().split()]
+    #     for document in documents
+    # ]
 
-    dictionary = corpora.Dictionary(texts)
-    corpus = [dictionary.doc2bow(text) for text in texts]
-    from gensim import models
-    lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=5)
-    doc = "Human machine interface for lab abc computer applications Human computer interaction"
-    vec_bow = dictionary.doc2bow(doc.lower().split())
-    vec_lsi = lsi[vec_bow]  # convert the query to LSI space
-    print(vec_lsi)
-    from gensim import similarities
-    index = similarities.MatrixSimilarity(lsi[corpus])  # transform corpus to LSI space and index it
-    sims = index[vec_lsi]  # perform a similarity query against the corpus
+    # # remove words that appear only once
+    # frequency = defaultdict(int)
+    # for text in texts:
+    #     for token in text:
+    #         frequency[token] += 1
+
+    # texts = [
+    #     [token for token in text if frequency[token] > 1]
+    #     for text in texts
+    # ]
+
+    # dictionary = corpora.Dictionary(texts)
+    # corpus = [dictionary.doc2bow(text) for text in texts]
+
+    # from gensim import models
+    # lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=5)
+
+    # doc = "تفاعل الإنسان و الحاسوب"
+    # doc = translator.translate(doc, dest='en').text
+    # vec_bow = dictionary.doc2bow(doc.lower().split())
+    # vec_lsi = lsi[vec_bow]  # convert the query to LSI space
+
+    # from gensim import similarities
+    # index = similarities.MatrixSimilarity(lsi[corpus])  # transform corpus to LSI space and index it
+
+    # sims = index[vec_lsi]  # perform a similarity query against the corpus
     # return jsonify({"ahmed": f"{list(enumerate(sims))}"})  # print (document_number, document_similarity) 2-tuples
     # return render_template("index.html")
-    from googletrans import Translator
-
-    translator = Translator()
-
-    return jsonify({"translate": f"{translator.translate('مرحبا', dest='en').text}"})
-
+    my = make_response(jsonify([request.json['a']]))
+    # my.json({"": "jsonify([request.json['a']])"})
+    # return "Response(jsonify([request.json['a']]), status=200, mimetype='application/json')"
+    return my
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=2200)

@@ -4,13 +4,8 @@ const root = document.getElementById("root");
 const next = document.getElementById("next");
 next.addEventListener("click", () => {
     const show = localStorage.getItem("show") || 0;
-    
-    if (+show < data.length - 1) {
-        // if (data[+show].type === "ques") {
-            
-        // } else {
-        //     // root.innerHTML = data[++root.dataset.i].innerHTML
-        // }
+
+    if (+show < data.length - 1 && !(data[+show].type === "ques")) {
         localStorage.setItem("show", +show + 1)
         run();
     }
