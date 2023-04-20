@@ -66,10 +66,10 @@ def ques():
     # sims = index[vec_lsi]  # perform a similarity query against the corpus
     # return jsonify({"ahmed": f"{list(enumerate(sims))}"})  # print (document_number, document_similarity) 2-tuples
     # return render_template("index.html")
-    my = make_response(jsonify([request.json['a']]))
+    # my = make_response(jsonify([request.json['a']]))
     # my.json({"": "jsonify([request.json['a']])"})
     # return "Response(jsonify([request.json['a']]), status=200, mimetype='application/json')"
-    return my
+    return "my"
 
 if __name__ == "__main__":
     app.run(debug=True, port=2200)
