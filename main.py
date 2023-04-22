@@ -71,6 +71,7 @@ def ques():
     index = similarities.MatrixSimilarity(lsi[corpus])  # transform corpus to LSI space and index it
 
     sims = index[vec_lsi]  # perform a similarity query against the corpus
+    print(sims)
     return jsonify({
         "sims": f"{sims}",
         "item": request.json['a'],
