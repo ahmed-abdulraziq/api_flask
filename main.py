@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, url_for, jsonify, Response, make_response
+from flask_cors import CORS
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route("/")
 def room():
@@ -8,11 +10,11 @@ def room():
 
 @app.route("/ques", methods={"post"})
 def ques():
-    # from collections import defaultdict
-    # from gensim import corpora
-    # from googletrans import Translator
+    from collections import defaultdict
+    from gensim import corpora
+    from googletrans import Translator
 
-    # translator = Translator()
+    translator = Translator()
 
     # documents = [
     #     "واجهة الإنسان و الآلة لتطبيقات الكمبيوتر المعملية ABC",
@@ -31,45 +33,49 @@ def ques():
     #     for document in documents
     # ]
 
-    # # remove common words and tokenize
-    # stoplist = set('for a of the and to in'.split())
-    # texts = [
-    #     [word for word in document.lower().split()]
-    #     for document in documents
-    # ]
+    documents = [
+        translator.translate(request.json['a']['notes'], dest='en').text,
+        translator.translate(request.json['a']['notes'], dest='en').text
+    ]
 
-    # # remove words that appear only once
-    # frequency = defaultdict(int)
-    # for text in texts:
-    #     for token in text:
-    #         frequency[token] += 1
+    # remove common words and tokenize
+    stoplist = set('for a of the and to in'.split())
+    texts = [
+        [word for word in document.lower().split()]
+        for document in documents
+    ]
 
-    # texts = [
-    #     [token for token in text if frequency[token] > 1]
-    #     for text in texts
-    # ]
+    # remove words that appear only once
+    frequency = defaultdict(int)
+    for text in texts:
+        for token in text:
+            frequency[token] += 1
 
-    # dictionary = corpora.Dictionary(texts)
-    # corpus = [dictionary.doc2bow(text) for text in texts]
+    texts = [
+        [token for token in text if frequency[token] > 1]
+        for text in texts
+    ]
 
-    # from gensim import models
-    # lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=5)
+    dictionary = corpora.Dictionary(texts)
+    corpus = [dictionary.doc2bow(text) for text in texts]
 
-    # doc = "تفاعل الإنسان و الحاسوب"
-    # doc = translator.translate(doc, dest='en').text
-    # vec_bow = dictionary.doc2bow(doc.lower().split())
-    # vec_lsi = lsi[vec_bow]  # convert the query to LSI space
+    from gensim import models
+    lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=5)
 
-    # from gensim import similarities
-    # index = similarities.MatrixSimilarity(lsi[corpus])  # transform corpus to LSI space and index it
+    doc = "تفاعل الإنسان و الحاسوب"
+    doc = translator.translate(request.json['b'][0], dest='en').text
+    vec_bow = dictionary.doc2bow(doc.lower().split())
+    vec_lsi = lsi[vec_bow]  # convert the query to LSI space
 
-    # sims = index[vec_lsi]  # perform a similarity query against the corpus
-    # return jsonify({"ahmed": f"{list(enumerate(sims))}"})  # print (document_number, document_similarity) 2-tuples
-    # return render_template("index.html")
-    # my = make_response(jsonify([request.json['a']]))
-    # my.json({"": "jsonify([request.json['a']])"})
-    # return "Response(jsonify([request.json['a']]), status=200, mimetype='application/json')"
-    return "my"
+    from gensim import similarities
+    index = similarities.MatrixSimilarity(lsi[corpus])  # transform corpus to LSI space and index it
+
+    sims = index[vec_lsi]  # perform a similarity query against the corpus
+    return jsonify({
+        "item": request.json['a'],
+        "arr": request.json['b']
+    })  # print (document_number, document_similarity) 2-tuples
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=2200)
