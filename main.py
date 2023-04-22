@@ -34,8 +34,8 @@ def ques():
     # ]
 
     documents = [
-        translator.translate(request.json['a']['notes'], dest='en').text,
-        translator.translate(request.json['a']['notes'], dest='en').text
+        translator.translate(request.json['a'][0]['notes'], dest='en').text,
+        translator.translate(request.json['a'][0]['notes'], dest='en').text
     ]
 
     # remove common words and tokenize
