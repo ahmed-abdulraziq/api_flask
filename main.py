@@ -72,6 +72,7 @@ def ques():
 
     sims = index[vec_lsi]  # perform a similarity query against the corpus
     return jsonify({
+        "sims": f"{sims}",
         "item": request.json['a'],
         "arr": request.json['b']
     })  # print (document_number, document_similarity) 2-tuples
