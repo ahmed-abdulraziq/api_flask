@@ -16,40 +16,23 @@ def ques():
 
     translator = Translator()
 
-    # documents = [
-    #     "واجهة الإنسان و الآلة لتطبيقات الكمبيوتر المعملية ABC",
-    #     "استطلاع رأي المستخدم بشأن زمن استجابة نظام الكمبيوتر",
-    #     "نظام إدارة واجهة المستخدم EPS",
-    #     "اختبار هندسة النظم و الأنظمة البشرية لـ EPS",
-    #     "علاقة وقت الاستجابة المدرك للمستخدم بقياس الخطأ",
-    #     "توليد أشجار ثنائية عشوائية غير مرتبة",
-    #     "رسم تقاطع المسارات في الأشجار",
-    #     "رسم بياني القصر الرابع عرض الأشجار و شبه الترتيب جيدًا",
-    #     "رسم بياني قاصرين مسح",
-    # ]
+    answer = []
+    item = request.json['item']
+    arr = request.json['arr']
 
-    # documents = [
-    #     translator.translate(document, dest='en').text
-    #     for document in documents
-    # ]
-
-    re = 0
-
-    for index in range(len(request.json['a'])):
+    for index in range(len(item)):
 
         documents = [
-            translator.translate(request.json['a'][index]['notes'], dest='en').text,
-            translator.translate(request.json['a'][index]['notes'], dest='en').text
+            translator.translate(item[index]['notes'], dest='en').text,
+            translator.translate(item[index]['notes'], dest='en').text
         ]
 
-        # remove common words and tokenize
         stoplist = set('for a of the and to in'.split())
         texts = [
             [word for word in document.lower().split() if word not in stoplist]
             for document in documents
         ]
 
-        # remove words that appear only once
         frequency = defaultdict(int)
         for text in texts:
             for token in text:
@@ -66,23 +49,14 @@ def ques():
         from gensim import models
         lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=5)
 
-        doc = "تفاعل الإنسان و الحاسوب"
-        doc = translator.translate(request.json['b'][index], dest='en').text
+        doc = translator.translate(arr[index], dest='en').text
         vec_bow = dictionary.doc2bow(doc.lower().split())
-        vec_lsi = lsi[vec_bow]  # convert the query to LSI space
+        vec_lsi = lsi[vec_bow]
 
-        if len(vec_lsi) > 0:
-            re += 1
-        # from gensim import similarities
-        # index = similarities.MatrixSimilarity(lsi[corpus])  # transform corpus to LSI space and index it
+        if len(vec_lsi) == 0:
+            answer.append(item[index]['notes'])
 
-        # sims = index[vec_lsi]  # perform a similarity query against the corpus
-
-    return jsonify({
-        "item": request.json['a'],
-        "arr": request.json['b'],
-        "re": re
-    })  # print (document_number, document_similarity) 2-tuples
+    return jsonify({ "answer": answer })
 
 
 if __name__ == "__main__":
