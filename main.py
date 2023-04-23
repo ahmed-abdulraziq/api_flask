@@ -37,7 +37,10 @@ def ques():
 
     for index in range(len(request.json['a'])):
 
-        documents = translator.translate(request.json['a'][index]['notes'], dest='en').text
+        documents = [
+            translator.translate(request.json['a'][index]['notes'], dest='en').text,
+            translator.translate(request.json['a'][index]['notes'], dest='en').text
+        ]
 
         # remove common words and tokenize
         stoplist = set('for a of the and to in'.split())
