@@ -68,7 +68,7 @@ def ques():
         vec_bow = dictionary.doc2bow(doc.lower().split())
         vec_lsi = lsi[vec_bow]  # convert the query to LSI space
 
-        if len(vec_lsi) > 0:
+        if len(vec_lsi) == 0:
             re += 1
         # from gensim import similarities
         # index = similarities.MatrixSimilarity(lsi[corpus])  # transform corpus to LSI space and index it
