@@ -1,17 +1,50 @@
 const run = () => {
     const show = localStorage.getItem("show") || 0;
-
-    const item = data[+show];
+    const {i, type} = item(+show);
 
     root.innerHTML = "";
 
-    if (item.type === "lesson") lesson(root, item);
-    else ques(root, item);
+    if (type === "lesson") lesson(i);
+    else if (type === "ques") ques(i);
+    else if (type === "full") full();
+    else if (type === "notes") notes(i);
     
     scrollTo(0,0);
 }
 
-const lesson = (root, item) => {
+const item = (show) => {
+    const item = data[show];
+    
+    if (item.type === "lesson") {
+        return {
+            i: item,
+            type: item.type,
+        }
+    } else if (item.type === "ques") {
+        let arr = [];
+
+        for (let i = 0; i < 10; i++) {
+            arr.push(item.ques[Math.floor((Math.random() * item.ques.length / 10) + (item.ques.length / 10) * i)]);
+        }
+
+        return {
+            i: arr,
+            type: item.type,
+        }
+    } else if (item.type === "full") {
+        return {
+            i: "",
+            type: item.type,
+        }
+    } else if (item.type === "notes") {
+        return {
+            i: item.notes,
+            type: item.type,
+        }
+    }
+}
+
+const lesson = (item) => {
     const title = document.createElement("h1");
     title.className = "title";
     title.textContent = item.title;
@@ -43,135 +76,167 @@ const lesson = (root, item) => {
     root.append(info);
 }
 
-const ques = (root, item) => {
+const ques = (item) => {
+    const title = document.createElement("h1");
+    title.className = "title";
+    title.textContent = "الامتحان";
 
-    if (item.type === "ques") {
+    const form = document.createElement("form");
+    form.id = "ques"
+
+    for (let i = 0; i < 10; i++) {
+        const divTextarea = document.createElement("div");
+        divTextarea.className = "textarea";
+    
+        const label = document.createElement("label");
+        label.textContent = item[i].ques
+        
+        const textarea = document.createElement("textarea");
+        textarea.name = `ques-${i}`;
+        textarea.id = `ques-${i}`;
+        
+        divTextarea.append(label);
+        divTextarea.append(textarea);
+        
+        form.append(divTextarea);
+    }
+
+    const send = document.createElement("div");
+    send.className = "send";
+
+    const input = document.createElement("input");
+    input.id = "send";
+    input.type = "submit";
+    input.value = "أرسل";
+
+    form.addEventListener("submit", (e) => { 
+        e.preventDefault();
+
         let arr = [];
-    
-        const title = document.createElement("h1");
-        title.className = "title";
-        title.textContent = "الامتحان";
-    
-        const form = document.createElement("form");
-        form.id = "ques"
-    
-        for (let i = 0; i < 10; i++) {
-            arr.push(item.ques[Math.floor((Math.random() * item.ques.length / 10) + (item.ques.length / 10) * i)])
-    
-            const divTextarea = document.createElement("div");
-            divTextarea.className = "textarea";
-        
-            const label = document.createElement("label");
-            label.textContent = arr[i].ques
-            
-            const textarea = document.createElement("textarea");
-            textarea.name = `ques-${i}`;
-            textarea.id = `ques-${i}`;
-            
-            divTextarea.append(label);
-            divTextarea.append(textarea);
-            
-            form.append(divTextarea);
+        for (let i = 0; i < e.target.length - 1; i++) {
+            arr.push(e.target[i].value);
         }
+        check(item, arr)
+    }
     
-        const send = document.createElement("div");
-        send.className = "send";
+    );
+
+    send.append(input)
+    form.append(send);
+
+    root.append(form);
+}
+
+const full = () => {
+    const divMsg = document.createElement("div");
+    divMsg.className = "msg";
+
+    const title = document.createElement("h2");
+    title.textContent = "أحسنت لقد تجوزة الامتحان بدون أى أخطاء ";
+
+    divMsg.append(title);
+
+    root.append(divMsg)
+}
+
+const notes = (item) => {
+    const divMsg = document.createElement("div");
+    divMsg.className = "msg";
+
+    const title = document.createElement("h2");
+    title.textContent = "أحسنت لقد تجوزة الامتحان ولكن هناك بعض الملاحظات";
+
+    divMsg.append(title);
+
+    for (let i = 0; i < i.length; i++) {
+        const b = document.createElement("b");
+        b.textContent = `ملاحظه`;
+
+        const p = document.createElement("p");
+        p.textContent = item[i];
+        p.append(b);
+
+        divMsg.append(p);
+    }
+
+    root.append(divMsg);
+}
+
+const check = async (item, arr) => {
+    let response = await fetch("https://ques.up.railway.app/ques", {
+        method: "POST",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          "item": item,
+          "arr": arr,
+        }),
+    });
+
+    const { answer } = await response.json()
+
+    const answerLen = 10 - answer.length
+
+    if (answerLen <= 5) {
+        root.innerHTML = "";
+
+        const divMsg = document.createElement("div");
+        divMsg.className = "msg";
     
+        const title = document.createElement("h2");
+        title.textContent = "للأسف هناك الكثير من الأخطاء";
+
+        divMsg.append(title);
+
+        const divSend = document.createElement("div");
+        divSend.className = "send";
+
         const input = document.createElement("input");
-        input.id = "send";
+        input.id = "reSend";
         input.type = "submit";
-        input.value = "أرسل";
-    
-        form.addEventListener("submit", (e) => { 
-            e.preventDefault();
-            check(arr, e.target)
-        }
+        input.value = "إعادة الامتحان";
+        input.addEventListener('click', () => run());
         
-        );
-    
-        send.append(input)
-        form.append(send);
-    
-        root.append(form);
+        divSend.append(input);
+        divMsg.append(divSend);
 
-    } else if (item.type === "full") {
-        root.innerHTML = `
-        <div class="err">
-            <h2>أحسنت لقد تجوزة الامتحان بدون أى أخطاء </h2>
-        </div>
-        `
-    } else {
-        root.innerHTML = item.notes
-    }
-
+        root.append(divMsg);
+    }else run()
 }
 
-const check = (item, arr) => {
-    let answer = 0;
-    let notes =`
-    <div class="err">
-        <h2>أحسنت لقد تجوزة الامتحان ولكن هناك بعض الملاحظات </h2>
-    `;
+const post = async (url, body) => {
+    let response = await fetch(url, {
+        method: "POST",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+    });
 
-    for (let i = 0; i < arr.length - 1; i++) {
-        const input = arr[i].value.split(/\s|\n/).filter((i) => i);
-        
-        let result = false;
-        
-        for (const key of item[i].key) {
-            result = false;
-            
-            for (let j = 0; j < input.length; j++) {
-                if (key === input[j]) {
-                    result = true;
-                    break;
-                }
-            }
+    const { answer } = await response.json();
 
-            if (!result) {
-                result = false;
-                break;
-            }
-        }
-
-        if (result) ++answer
-        else notes += `<p><b>ملاحظه </b>${item[i].notes}</p>`;
-    }
-
-    // for (let i = 3; i < 7; i++) {
-    //     if (data[divShow].ques[i] === arr[i]) ++answer
-    // }
-
-    // for (let i = 7; i < 10; i++) {
-    //     if (data[divShow].ques[i] === arr[i]) ++answer
-    // }
-    if (answer > 5) {
-        data[+localStorage.getItem("show")].type = "";
-        
-        if (answer == 10) {
-            data[+localStorage.getItem("show")].type = "full";
-             root.innerHTML = `
-            <div class="err">
-                <h2>أحسنت لقد تجوزة الامتحان بدون أى أخطاء </h2>
-            </div>
-            `
-        } else {
-            data[+localStorage.getItem("show")].type = "notes";
-            notes += "</div>";
-            root.innerHTML = notes
-            data[+localStorage.getItem("show")].notes = notes;
-        }
-    } else {
-        notes = "";
-        root.innerHTML = `
-        <div class="err">
-            <h2>للأسف هناك الكثير من الأخطاء</h2>
-            <div class="send">
-                <input id="reSend"  onclick="run()" type="submit" value="إعادة الامتحان">
-            </div>
-        </div>
-        `
-    }    
+    return answer;
 }
 
-// const reSend = () => root.innerHTML = data[+show].innerHTML
+const git = async (url) => {
+    let response = await fetch(url, {
+        method: "GIT",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+        },
+    });
+
+    const { answer } = await response.json();
+
+    return answer;
+}

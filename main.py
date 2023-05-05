@@ -1,8 +1,14 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
+from collections import defaultdict
+# from gensim import corpora, models
+from googletrans import Translator
 
 app = Flask(__name__)
+
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
+
+translator = Translator()
 
 @app.route("/")
 def room():
@@ -10,18 +16,11 @@ def room():
 
 @app.route("/ques", methods={"post"})
 def ques():
-    from collections import defaultdict
-    from gensim import corpora
-    from googletrans import Translator
-
-    translator = Translator()
-
     answer = []
     item = request.json['item']
     arr = request.json['arr']
 
     for index in range(len(item)):
-
         documents = [
             translator.translate(item[index]['notes'], dest='en').text,
             translator.translate(item[index]['notes'], dest='en').text
@@ -46,7 +45,6 @@ def ques():
         dictionary = corpora.Dictionary(texts)
         corpus = [dictionary.doc2bow(text) for text in texts]
 
-        from gensim import models
         lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=5)
 
         doc = translator.translate(arr[index], dest='en').text
@@ -60,4 +58,4 @@ def ques():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=2200)
+    app.run(debug=True, port=2400)

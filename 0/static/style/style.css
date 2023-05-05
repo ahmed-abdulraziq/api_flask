@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+:root {
+    --transition: all .3s ease;
+}
+
+* {
+    font-family: 'Cairo', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    direction: rtl;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1170px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+/* start room ------------------------------- */
+aside.room {
+    padding: 40px 0;
+}
+aside.room #root {
+    position: relative;
+    min-height: 68vh;
+}
+aside.room #root .fa-spinner,
+aside.room #root .err {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #374957;
+}
+aside.room #root .fa-spinner {
+    font-size: 50px;
+}
+aside.room #root .err {
+    text-align: center;
+    width: 100%;
+}
+aside.room .title {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #374957;
+    font-size: 28px;
+}
+aside.room .video {
+    margin-bottom: 40px;
+    padding: 40px;
+    background-color: #EFF3F6;
+    border-radius: 15px;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,.2));
+}
+@media (max-width: 767px) {
+    aside.room .video {
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+}
+aside.room video {
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 15px;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,.2));
+}
+aside.room .info {
+    margin: 0 50px;
+    color: #374957;
+}
+@media (max-width: 767px) {
+    aside.room .info {
+        margin: 0 20px;
+    }
+}
+aside.room h2 {
+    margin-bottom: 12px;
+}
+aside.room .desc {
+    font-size: 18px;
+    line-height: 30px;
+}
+aside.room hr {
+    margin: 40px 50px;
+    color: #bac8d3;
+}
+@media (max-width: 767px) {
+    aside.room hr {
+        margin: 30px 20px;
+    }
+}
+aside.room .control {
+    margin: 0 50px;
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 767px) {
+    aside.room .control {
+        margin: 0 20px;
+    }
+}
+aside.room .control button {
+    border: none;
+    color: #374957;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #fff;
+    cursor: pointer;
+}
+aside.room button#next i {
+    margin-left: 5px;
+}
+aside.room button#previous i {
+    margin-right: 5px;
+}
+
+aside.room #ques label {
+    margin: 10px 0;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
+}
+aside.room #ques textarea {
+    margin: 0 50px 20px;
+    padding: 25px;
+    display: block;
+    font-size: 18px;
+    width: calc(100% - 100px);
+    background-color: #EFF3F6;
+    border-radius: 15px;
+    border: none;
+    resize: none;
+    outline: none;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,.2));
+}
+@media (max-width: 767px) {
+    aside.room #ques textarea {
+        margin: 0 20px 20px;
+        width: calc(100% - 40px);
+    }
+}
+aside.room #ques .checkbox {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+aside.room #ques .checkboxs {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+aside.room #ques .checkbox label {
+    margin: 0;
+    margin-left: 10px;
+
+}
+aside.room #ques .radio div {
+    margin: 0 50px;
+    display: flex;
+    align-items: center;
+}
+aside.room #ques .radio div label {
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.send {
+    margin: 30px auto 0;
+    width: fit-content;
+}
+#send,
+#reSend {
+    padding: 10px 30px;
+    border: none;
+    color: #EFF3F6;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #374957;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,.2));
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #EFF3F6;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,.2));
+
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #374957;
+  transform-origin: center;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+input[type="radio"] {
+    appearance: none;
+    background-color: #EFF3F6;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 2em 2em #374957;
+}
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}

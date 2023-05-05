@@ -56,7 +56,7 @@ aside.room #root {
     min-height: 68vh;
 }
 aside.room #root .fa-spinner,
-aside.room #root .err {
+aside.room #root .msg {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -66,7 +66,7 @@ aside.room #root .err {
 aside.room #root .fa-spinner {
     font-size: 50px;
 }
-aside.room #root .err {
+aside.room #root .msg {
     text-align: center;
     width: 100%;
 }
@@ -110,6 +110,7 @@ aside.room h2 {
 aside.room .desc {
     font-size: 18px;
     line-height: 30px;
+    text-align: justify;
 }
 aside.room hr {
     margin: 40px 50px;
@@ -144,32 +145,34 @@ aside.room button#next i {
 aside.room button#previous i {
     margin-right: 5px;
 }
-
+aside.room #ques .textarea {
+    background-color: #EFF3F6;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    border: 2px solid #EFF3F6;
+}
 aside.room #ques label {
-    margin: 10px 0;
+    margin: 10px 20px;
     display: inline-block;
     font-size: 22px;
     font-weight: 500;
 }
 aside.room #ques textarea {
-    margin: 0 50px 20px;
-    padding: 25px;
+    padding: 6px 12px;
     display: block;
     font-size: 18px;
-    width: calc(100% - 100px);
-    background-color: #EFF3F6;
-    border-radius: 15px;
+    width: 100%;
     border: none;
     resize: none;
     outline: none;
-    filter: drop-shadow(0 4px 12px rgba(0,0,0,.2));
 }
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     aside.room #ques textarea {
         margin: 0 20px 20px;
         width: calc(100% - 40px);
     }
-}
+} */
 aside.room #ques .checkbox {
     margin-top: 20px;
     display: flex;
