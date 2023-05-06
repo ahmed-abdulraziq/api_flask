@@ -149,16 +149,16 @@ const notes = (item) => {
 
     divMsg.innerHTML = item;
     divMsg.append(title);
-    console.log(item);
+
     for (let i = 0; i < i.length; i++) {
-        const b = document.createElement("b");
+        const b = document.createElement("B");
         b.textContent = `ملاحظه`;
 
         const p = document.createElement("p");
         p.textContent = item[i];
         p.append(b);
 
-        divMsg.append(b);
+        divMsg.append(p);
     }
     root.append(divMsg);
 }
