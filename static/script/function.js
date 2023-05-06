@@ -148,7 +148,7 @@ const notes = (item) => {
     title.textContent = "أحسنت لقد تجوزة الامتحان ولكن هناك بعض الملاحظات";
 
     divMsg.append(title);
-
+    console.log(item);
     for (let i = 0; i < i.length; i++) {
         const b = document.createElement("b");
         b.textContent = `ملاحظه`;
