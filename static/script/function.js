@@ -206,7 +206,15 @@ const check = async (item, arr) => {
         divMsg.append(divSend);
 
         root.append(divMsg);
-    }else run()
+    }else if (answerLen == 10) {
+        const show = localStorage.getItem("show") || 0;
+        data[show].type = "full"
+        run()  
+    }else {
+        const show = localStorage.getItem("show") || 0;
+        data[show].type = "notes"
+        run()  
+    } 
 }
 
 const post = async (url, body) => {
