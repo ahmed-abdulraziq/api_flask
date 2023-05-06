@@ -77,6 +77,7 @@ const lesson = (item) => {
 }
 
 const ques = (item) => {
+    console.log(item)
     const title = document.createElement("h1");
     title.className = "title";
     title.textContent = "الامتحان";
@@ -163,7 +164,7 @@ const notes = (item) => {
 }
 
 const check = async (item, arr) => {
-    let response = await fetch("https://ques.up.railway.app/ques", {
+    let response = await fetch("/ques", {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
