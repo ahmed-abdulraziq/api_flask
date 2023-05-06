@@ -208,7 +208,7 @@ const check = async (item, arr) => {
         root.append(divMsg);
     }else if (answerLen == 10) {
         const show = localStorage.getItem("show") || 0;
-        data[+show].type = "full"
+        data[4].type = "full"
         run()  
     }else {
         const show = localStorage.getItem("show") || 0;
