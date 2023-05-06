@@ -158,7 +158,7 @@ const notes = (item) => {
         p.textContent = item[i];
         p.append(b);
 
-        divMsg.append(p);
+        divMsg.append(b);
     }
     root.append(divMsg);
 }
