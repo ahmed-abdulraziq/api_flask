@@ -147,6 +147,7 @@ const notes = (item) => {
     const title = document.createElement("h2");
     title.textContent = "أحسنت لقد تجوزة الامتحان ولكن هناك بعض الملاحظات";
 
+    divMsg.innerHTML = item;
     divMsg.append(title);
     console.log(item);
     for (let i = 0; i < i.length; i++) {
@@ -159,7 +160,6 @@ const notes = (item) => {
 
         divMsg.append(p);
     }
-
     root.append(divMsg);
 }
 
