@@ -181,7 +181,7 @@ const check = async (item, arr) => {
     const { answer } = await response.json()
 
     const answerLen = 10 - answer.length
-
+    console.log(answerLen);
     if (answerLen <= 5) {
         root.innerHTML = "";
 
