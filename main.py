@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from collections import defaultdict
-# from gensim import corpora, models
+from gensim import corpora, models
 from googletrans import Translator
 
 app = Flask(__name__)
