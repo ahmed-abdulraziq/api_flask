@@ -154,9 +154,9 @@ const notes = (item) => {
         b.textContent = "ملاحظه";
 
         const p = document.createElement("p");
-        p.textContent = item[i];
-        
         p.append(b);
+        p.textContent = item[i];
+
         divMsg.appendChild(p);
     }
     root.append(divMsg);
@@ -180,7 +180,7 @@ const check = async (item, arr) => {
     const { answer } = await response.json()
 
     const answerLen = 10 - answer.length
-    console.log(answerLen);
+
     if (answerLen <= 5) {
         root.innerHTML = "";
 
