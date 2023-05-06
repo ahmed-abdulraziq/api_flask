@@ -208,11 +208,11 @@ const check = async (item, arr) => {
         root.append(divMsg);
     }else if (answerLen == 10) {
         const show = localStorage.getItem("show") || 0;
-        data[show].type = "full"
+        data[+show].type = "full"
         run()  
     }else {
         const show = localStorage.getItem("show") || 0;
-        data[show].type = "notes"
+        data[+show].type = "notes"
         run()  
     } 
 }
