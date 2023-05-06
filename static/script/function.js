@@ -147,18 +147,17 @@ const notes = (item) => {
     const title = document.createElement("h2");
     title.textContent = "أحسنت لقد تجوزة الامتحان ولكن هناك بعض الملاحظات";
 
-    divMsg.innerHTML = item;
     divMsg.append(title);
 
-    for (let i = 0; i < i.length; i++) {
+    for (let i = 0; i < item.length; i++) {
         const b = document.createElement("B");
-        b.textContent = `ملاحظه`;
+        b.textContent = "ملاحظه";
 
         const p = document.createElement("p");
         p.textContent = item[i];
+        
         p.append(b);
-
-        divMsg.append(p);
+        divMsg.appendChild(p);
     }
     root.append(divMsg);
 }
