@@ -151,7 +151,7 @@ const notes = (item) => {
 
     for (let i = 0; i < item.length; i++) {
         const p = document.createElement("p");
-        p.textContent = "<B>ملاحظه</B>" + item[i];
+        p.innerHTML = "<B>ملاحظه</B>" + item[i];
 
         divMsg.appendChild(p);
     }
