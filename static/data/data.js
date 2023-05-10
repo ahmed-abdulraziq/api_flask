@@ -3,7 +3,7 @@ let data = [
         "id":0,
         "type": "lesson",
         "title": "الدرس الاول",
-        "video": "../static/video/awesome-video.mp4",
+        "video": "https://res.cloudinary.com/dtxava86t/video/upload/v1683583188/video/lesson1.mp4",
         "sub-title": "ما هي معالجة اللغة الطبيعية NLP ؟",
         "desc": `
             تعتبر معالجة اللغات الطبيعية من المواضيع المثيرة للاهتمام في عصر أصبحت به التكنولوجيا شريكة البشر في كل المجالات تتم معالجة اللغات الطبيعية من خلال مراحل متكاملة مع بعضها للوصول إلى الهدف المطلوب.
@@ -137,7 +137,7 @@ let data = [
         "id":1,
         "type": "lesson",
         "title": "الدرس الثانى",
-        "video": "../static/video/awesome-video.mp4",
+        "video": "https://res.cloudinary.com/dtxava86t/video/upload/v1683583188/video/lesson2.mp4",
         "sub-title": "استخلاص النصوص Text Extraction",
         "desc": `
             تقنية أخرى مهمة من تقنيات معالجة اللغة الطبيعية NLP هي استخلاص النصوص Text Extraction، وهي تقنية تساعد على توفير الكثير من الوقت والجهد عند الحاجة إلى البحث عن معلومات أو أجزاء محددة من النصوص بداخل كتب أو محتوى كبير للغاية وواسع.
@@ -252,7 +252,7 @@ let data = [
         "id":2,
         "type": "lesson",
         "title": "الدرس الثالث",
-        "video": "../static/video/awesome-video.mp4",
+        "video": "https://res.cloudinary.com/dtxava86t/video/upload/v1683579911/video/lesson3.mp4",
         "sub-title": "تطبيقات معالجة النصوص:",
         "desc": `
             ان لخوارزميات معالجة النصوص تطبيقات مختلفة بعضها قد لا يبدو متوقعا كاستخدام مباشرة لها ونذكر هنا بعضها لتوضيح حجم وأثر معالجة النصوص على واقع العلم الحديث:
@@ -389,7 +389,7 @@ let data = [
         "id":3,
         "type": "lesson",
         "title": "الدرس الرابع",
-        "video": "../static/video/awesome-video.mp4",
+        "video": "https://res.cloudinary.com/dtxava86t/video/upload/v1683583188/video/lesson4.mp4",
         "sub-title": "مراحل معالجة النصوص NLP",
         "desc": `
             المرحلة الأولى: تجزئة الجمل Sentence Segmentation
@@ -623,7 +623,7 @@ let data = [
                 "ques": "ما التحديات التي تواجه معالجة اللغة الطبيعية NLP ؟",
                 "answer": "إجابة السؤال الأول",
                 "key": ["إجابة", "الأول"],
-                "notes":" الدقة و اللهجات واللغات العامية و مشاكل تقسيم الجمل"
+                "notes": " الدقة و اللهجات واللغات العامية و مشاكل تقسيم الجمل"
                 
             },
             {
@@ -737,7 +737,7 @@ let data = [
         "id":5,
         "type": "lesson",
         "title": "الدرس الاول",
-        "video": "../static/video/awesome-video.mp4",
+        "video": "https://res.cloudinary.com/dtxava86t/video/upload/v1683583187/video/lesson5.mp4",
         "sub-title": "مراحل معالجة النصوص NLP",
         "desc": `
             المرحلة الأولى: تجزئة الجمل Sentence Segmentation
@@ -802,271 +802,597 @@ let data = [
         `,
     },
     {
-        "id": 5,
-        "type": "lesson",
-        "title": "العنوان الرئيسي 5",
-        "video": "../static/video/awesome-video.mp4",
-        "sub-title": "عنوان فرعى",
-        "desc": "من المهم جدًا أن ينتبه العميل لعملية اشتقاق الدهون. يقال إنها هي نفسها مناسبة لهما ، لكن لا أحد يريد أن يتزوجها من البعض ، من زوجها ، بسرور إيجاد أي هروب منهم ما لم يوفروا ذلك. من المهم جدًا أن ينتبه العميل لعملية اشتقاق الدهون. يقال إنها هي نفسها مناسبة لهما ، لكن لا أحد يريد أن يتزوجها من البعض ، من زوجها ، بسرور إيجاد أي هروب منهم ما لم يوفروا ذلك. من المهم جدًا أن ينتبه العميل لعملية اشتقاق الدهون. يقال إنها هي نفسها مناسبة لهما ، لكن لا أحد يريد أن يتزوجها من البعض ، من زوجها ، بسرور إيجاد أي هروب منهم ما لم يوفروا ذلك.",
-        "innerHTML":`
-        <h1 class="title"> 5 العنوان الرئيسي </h1>
-        <div class="video">
-            <video controls="" autoplay="" name="media"></video>
-        </div>
-        <div class="info">
-            <h2> عنوان فرعى</h2>
-            <p class="desc">
-                من المهم جدًا أن ينتبه العميل لعملية اشتقاق الدهون. يقال إنها هي نفسها مناسبة لهما ، لكن لا أحد يريد أن يتزوجها من البعض ، من زوجها ، بسرور إيجاد أي هروب منهم ما لم يوفروا ذلك. من المهم جدًا أن ينتبه العميل لعملية اشتقاق الدهون. يقال إنها هي نفسها مناسبة لهما ، لكن لا أحد يريد أن يتزوجها من البعض ، من زوجها ، بسرور إيجاد أي هروب منهم ما لم يوفروا ذلك. من المهم جدًا أن ينتبه العميل لعملية اشتقاق الدهون. يقال إنها هي نفسها مناسبة لهما ، لكن لا أحد يريد أن يتزوجها من البعض ، من زوجها ، بسرور إيجاد أي هروب منهم ما لم يوفروا ذلك.
-            </p>
-        </div>
-        `
-    },
-    {
         "id": 6,
         "type": "lesson",
-        "title": "العنوان الرئيسي 6",
-        "video": "../static/video/awesome-video.mp4",
-        "sub-title": "عنوان فرعى",
-        "desc": "من المهم جدًا أن ينتبه العميل لعملية اشتقاق الدهون. يقال إنها هي نفسها مناسبة لهما ، لكن لا أحد يريد أن يتزوجها من البعض ، من زوجها ، بسرور إيجاد أي هروب منهم ما لم يوفروا ذلك. من المهم جدًا أن ينتبه العميل لعملية اشتقاق الدهون. يقال إنها هي نفسها مناسبة لهما ، لكن لا أحد يريد أن يتزوجها من البعض ، من زوجها ، بسرور إيجاد أي هروب منهم ما لم يوفروا ذلك. من المهم جدًا أن ينتبه العميل لعملية اشتقاق الدهون. يقال إنها هي نفسها مناسبة لهما ، لكن لا أحد يريد أن يتزوجها من البعض ، من زوجها ، بسرور إيجاد أي هروب منهم ما لم يوفروا ذلك.",
-        "innerHTML":`
-        <h1 class="title"> 6 العنوان الرئيسي </h1>
-        <div class="video">
-            <video controls="" autoplay="" name="media"></video>
-        </div>
-        <div class="info">
-            <h2> عنوان فرعى</h2>
-            <p class="desc">
-                من المهم جدًا أن ينتبه العميل لعملية اشتقاق الدهون. يقال إنها هي نفسها مناسبة لهما ، لكن لا أحد يريد أن يتزوجها من البعض ، من زوجها ، بسرور إيجاد أي هروب منهم ما لم يوفروا ذلك. من المهم جدًا أن ينتبه العميل لعملية اشتقاق الدهون. يقال إنها هي نفسها مناسبة لهما ، لكن لا أحد يريد أن يتزوجها من البعض ، من زوجها ، بسرور إيجاد أي هروب منهم ما لم يوفروا ذلك. من المهم جدًا أن ينتبه العميل لعملية اشتقاق الدهون. يقال إنها هي نفسها مناسبة لهما ، لكن لا أحد يريد أن يتزوجها من البعض ، من زوجها ، بسرور إيجاد أي هروب منهم ما لم يوفروا ذلك.
-            </p>
-        </div>
-        `
+        "title": "الدرس الثانى",
+        "video": "https://res.cloudinary.com/dtxava86t/video/upload/v1683583187/video/lesson6.mp4",
+        "sub-title": "مراحل معالجةااللغات الطبيعية ",
+        "desc": `
+            ملاحظة قبل المتابعة تجدر الإشارة إلى أن هذه هي الخطوات في تسلسل معالجة اللغات الطبيعية نموذجية، فقد نتخطى بعض الخطوات أو نعيد ترتيب الخطوات اعتمادا على ما نريد القيام به وكيفية تنفيذ مكتبات معالجة اللغات الطبيعية على سبيل المثال، تقوم بعض المكتبات مثل Spacy بتنفيذ تجزئة الجمل بالاعتماد على نتيجة مرحلة الإعراب الاعتمادي .
+
+            والآن لنفكر معا كيف يمكننا تنفيذ كل هذه الخطوات خطوات معالجة اللغات الطبيعية.
+            
+            إذا كنا نعمل على معالجة اللغة الإنجليزية فهناك عدة مكتبات بلغة البايثون متساعدنا في تنفيذ هذه الخطوات، أما إذا أردنا معالجة اللغة العربية فالأمر مختلف، لأن اللغة العربية ما زالت بحاجة إلى دعمكم أيها القراء والباحثون في هذا المجال، فأغلب المكتبات لم تدعم اللغة العربية
+            
+            بعد
+            
+            ما هي معالجه النصوص  (Text Analysis) ؟
+            
+            معالجة النصوص هي فرع من فروع معالجة اللغات الطبيعية Natural Language (Processing NLP ويعنى هذا الفرع بمعالجة اللغة المكتوبة بالذات. يشار إليها كذلك بتنقيب النصوص (Text Mining ، حيث تتمحور عمليات هذا الفرع من معالجة اللغات الطبيعية على أخذ النص الخام وتحويله إلى شكل يمكن للحاسب فهمه واستخلاص معلومات منه كيني منطقية أو بيانات مهيكلة.
+            
+            أو يمكن القول بأنها عملية استخلاص معلومات غير معروفة مسبقا من قبل الحاسب الآلي من خلال استخلاص المعلومات أليا من عدة مصادر مكتوبة. 
+            
+            تتشابه تقنيات معالجة النصوص (تنقيب النصوص) في الهدف النهائي مع المعلومات إلا أن استخلاص المعلومات غير محصور فقط باستخلاصها من النص المكتوب إذ يمكن استخلاص المعلومات من الصور والصوت وقواعد البيانات المهيكلة ... الخ.
+            تحت مسمى معالجة النصوص تقع العديد من الخوارزميات التي تتنوع في آلية عملها ما بين خوارزميات إحصائية، تعلم عيق وخوارزميات لغوية.
+            
+            عمليات معالجة النصوص:-
+            
+            كانت النصوص حتى فترة قريبة من التاريخ هي المصدر الوحيد لتخزين المعلومات وتشاركها، ومازالت النصوص حاليا – رغم التنوع الكبير في الوسائط الممكن استخدامها لنقل المعلومات المصدر الأساسي لحفظ المعلومات بشتى أنواعها إضافة إلى أهميتها في التواصل مما يجعل عمليات استخلاص المعلومات من النصوص لانهائية بمقدار المعلومات الممكن حفلها فيها، فمن تحديد النصوص المتشابهة إلى تحديد توجه النص (إيجابي أو سلبي وصولاً لى التشخيص الآلي واستخلاص العناوين وغيرها الكثير.
+            
+            وتذكر بعضا من أشهر العمليات في معالجة النصوص :-
+            ١-استرجاع المعلومات( Information retrieval IR) حيث يتم استخدام تقنيات معالجة النصوص للبحث والوصول إلى بيانات مكتوبة (كلمات) أو عبارات أو ما شابه معانيها من ديوان نصتي ما (corpus) على الانترنت أو في دواوين شخصية. 
+            ٢-التعرف على الأعلام : Named entity recognition (NER) وهي عملية التعرف على الأسماء الأعلام للأشخاص والأماكن والمؤسسات ... ، واستخلاصها. 
+            ٣-الإحالة المشتركة : (Coreference) وهي عملية التعرف على الكلمات والضمائر التي تشير إلى نفس الكينونة. 
+            ٤-عتقدة النصوصDocument clustering) حيث يتم التعرف على النصوص المتشابهة وتجميعها معا.
+            
+            ٥-تحليل الآراء (Sentiment analysis) حيث يهدف هذا التحليل لتحديد المعاني الكامنة في النص وليس الحقائق، كاستكشاف المشاعر والتوجه في النص إيجابي سلبي أو مهين)
+            ولكل واحدة من هذه العمليات استخداماتها المباشرة التي يمكن لك عزيزي القارئ تخيل بعضها، فمثلا عمليات التحليل الدلالي تستخدم مثلا في مواقع التواصل الاجتماعي للتعرف على التعليقات المهينة وحذفها، بينما استرجاع المعلومات تستخدم في محركات البحث ستركز في المقالات القادمة على تقنيات و خوارزميات تجميع النصوص المختلف بالذات.  
+            لغات برمجة NLP :
+            
+            Python:
+            
+            تتوفر مكتبات NLP ومجموعات الأدوات بشكل عام في Python ، ولهذا السبب تم تطوير عالمية مشاريع NLP في Python تسهل بين التطوير التفاعلية لـ Python تطويرالتعليمات البرمجية الجديدة واختبارها. 
+            
+            : ++C و Java
+            
+            المعالجة كميات كبيرة من البيانات غالبًا ما يُفضل استخدام ++C و Java لأنها يمكن أن تدعم تعليمة برمجية أكثر كفاءة.
+            المكتبات وبينات التطوير :
+            
+            فيما يلي أمثلة لبعض مكتبات NLP الشائعة .
+            
+            Tensor flow و PyTorchهاتان هما أكثر مجموعات أدوات التعلم العميق شيوعًا. وهي متاحة بحرية للأغراض البحثية والتجارية ولتن كانت تدعم لغات متعددة، فإن لغتهم الأساسية. هي Python فهي تأني مع مكتبات كبيرة من المكونات التي تم إنشاؤها مسبقاء لذا فعليا ما تتطلب نماذج معالجة اللغة الطبيعية المتطورة جذا توصيل هذه المكونات ببعضها البعض. كما أنها تدعم البنية الأساسية عالية الأداء للحوسبة، مثل مجموعات من الآلات المزودة بمسرعات وحدة معالجة رسومية.
+            وجودات المحادثة البسيطة) التي يتم تنفيذها في Python PyTorch الوثائق ممتازة نسيق المختلفة التي تم تدريبها مسبقاء بالإضافة إلى مجموعة أدوات وامع التوصيل والشغل HuggingFace تقوم هذه الشركة بتوزيع مناك من نماذج معالجة اللغة التعليمية التعلم في TensorFlow و PyTorch التي تمكن المطورين من التقيم السريع لمدى جودة أداء المختلفة التي تم التدريب عليها في مهامهم المحددة. النماذج
+            
+            Allen Nlp هذه مكتبة من مكونات معالجة اللغة الطبيعية عالية المستوي ف على سبيل المثال روبوتات المحادثه البسيطه) التي يتم تنفيذها في البايثون الوثائق ممتازه.
+            Huggingfaceتقوم هذه الشركه بتوزيع مئات من نماذج معالجه اللغه الطبيعيه للتعلم العميق المختلفه التي تم تدريبها مسبقا بالاضافه الي مجموعه ادوات برامج التوصيل والتشغيل في الpyTorchو Tensorflowالتي تمكن المطورين من التقييم السريع لمدي جوده اداء النماذج المختلفه التي تم التدريب عليها في مهامهم المحدده.  
+            
+            Spark NLP: Spark NLP هي مكتبة معالجة نصية مفتوحة المصدر لمعالجة اللغة الطبيعية المتقدمة للغات البرمجة Python و Scala Java هدفها هو توفير واجهة برمجة التطبيقات (API) لخطوط أنابيب معالجة اللغة الطبيعية وهو يقدم نماذج الشبكة العصبية المدربة وخطوط الأنابيب وحفلات الزفاف فضلا عن دعم تدريب اللعلاج المخصصة.
+            
+            SpaCy معالجة اللغة الطبيعية pay: هي مكتبة مجانية ومفتوحة المصدر لمعالجة ملفات NLP المتقدمة في Python ، وقد تم تصميمها خصيصا للمساعدة في إنشاء التطبيقات التي يمكنها معالجة كميات كبيرة من النصوص وفهمها. ومن المعروف أن Spacy بديهية للغاية ويمكنها التعامل مع العديد من المهام اللازمة في مشاريع معالجة اللغة الطبيعية المشتركة.
+            
+            باختصار تعتبر معالجة اللغة الطبيعية مجالاً مثيراً من مجالات تطوير الذكاء الاصطناعي التي تغذي مجموعة واسعة من المنتجات الجديدة مثل محركات البحث وروبوتات المحادثة وأنظمة التوصية وأنظمة الكلام إلى النص. مع استمرار الوصلات البشرية مع أجهزة الكمبيوتر في الابتعاد عن الأزرار والنماذج واللغات الخاصة بالمجال ، سيستمر الطلب على النمو في معالجة اللغة الطبيعية في الزيادة. ولهذا السبب، تلتزم Oracle Cloud Infrastructure بتوفير أداء محلي مع أشكال وأدوات الحوسبة المحسنة للأداء من أجل معالجة اللغة الطبيعية. توفر Oracle Cloud Infrastructure صفيقا من أشكال وحدات معالجة الرسومات (GPU) التي يمكنك نشرها في دقائق لبدء التجربة مع NLP.  
+            برمجة مراحل معالجة اللغات الطبيعية باستخدام بايثون :-
+            
+            مكتبات معالجة اللغات الطبيعية في بايثون: Python
+            
+            بعد هذه المقدمة البسيطة عن معالجة النصوص أن لنا الأوان بعد أن أدركنا مدى حجمه وأهميته وتفرع تطبيقاته أن نبدأ دربنا نحو تعلم استخدامه اخترنا في هذا المقال أن نستخدم المصادر المتاحة في لغة بايثون للمكانة العالية التي تتخذها اللغة حاليًا في مجال الذكاء الصنعي بشكل عالم
+            
+            تتوافر العديد من المكتبات في بايثون للعمليات المختلفة التي من الممكن القيام بها ضمن مجال معالجة اللغات الطبيعية ومعالجة النصوص، ولكننا في هذا المقال سنتعرف على مكتبتين في مجال معالجة النصوص بالتحديد، حيث أنها تحتوي على العمليات الأساسية لمعالجة النصوص، بالإضافة إلى العمليات الخاصة لنمذجة المواضيع التي سنعود لمناقشتها في المقالات القادمة. 
+            
+            مجموعة أدوات اللغات الطبيعية: (Natural Language Toolkit (NT
+            
+            وهي مكتبة مجانية مفتوحة المصدر، تتضمن المهام الأساسية في معالجة اللغات الطبيعية والنصوص من الحصول على الوحدات اللغوية (Tokenization) إلى التجنيع (stemming) وصولا التنبؤ بأقسام الكلام (Part of Speech tagging) الاستنتاج الدلالي (semantic reasoning) وغيرها العديد من المهام اللغوية.
+            
+            تم تطوير المكتبة في جامعة بنسلفانيا من قبل ستيفن بيرد وإدوارد لوبر، ولعبت دورا كبيرا منذ تطويرها في الأبحاث المتعلقة بمعالجة اللغات الطبيعية، إذ مع امتلاكها واجهة استخدام سهلة وتوفيرها للعديد من المجمعات النصية والمعجمية فقد أصبحت المكتبة التعليمية التي تلجأ لها الجامعات للتدريس والأبحاث، وهي المكان الأنسب ليبدأ أي مهتم في اللغات الطبيعية مسيرته نحو فهم واستخدام مهام معالجة اللغات الطبيعية.
+            المكتبة كذلك تتميز بدعمها لعدة لغات تتنوع بحسب المهمة المطلوبة إذ بعض اللغات مدعومة يض المهام وغير مدعومة للبعض الآخر، واللغة العربية من ضمن اللغات المتواجدة في قائمة الدعم لبعض المهام التي سنستعرضها لاحقا في هذا المقال.
+            
+            التثبيت
+            
+            pip install –user -U nitk
+            
+            مو تطلب المكتبة توافر المكتبة العددية لبايثون numpy، لذا في حال عدم توافرها مسبقا على الجهاز يجب تثبيتها:
+            
+            pip install –user -U numpy
+            
+            يمكن الاطلاع على الموقع الرسمي للمكتبة من هذا الرابط https://www.altk.org، حيث يتوافر توثيق جيد لها.
+            
+            مكتبة جينسم Gensim :
+            
+            وهي مكتبة مجانية مفتوحة المصدر كذلك، تتضمن توابع تساعد على تحديد التشابه الدلالي فيما بين النصوص وتتميز بشكل خاص بفعاليتها العالية مقارنة مع باقي المكتبات المفتوحة في هذا المجال إذ تتحمل معالجة مجمعات نصية بأحجام كبيرة مع إدارة جيدة للذاكرة. مكتبة جينسم Gensim مبنية على أساس خوارزميات نمذجة فضاء المتجهات vector) (pace modeling در خوارزميات نمذجة المواضيع (topic modeling) والتي سنناقشها يتعمق أكبر في المقالات اللاحقة ولكن للتوضيح باختصار فإن كلا النموذجين من الخوارزميات يعتمد مبدأ التعلم بلا إشراف لتحديد التشابه الدلالي فيما بين النصوص وذلك وفق خوارزميات إحصائية. 
+            التثبيت
+            
+            pip install -0 gensim
+            
+            هذه المكتبة كذلك تتطلب توافر المكتبة العددية لبايثون numpy
+            
+            يمكن الاطلاع على الموقع الرسمي للمكتبة من هذا الرابط https://radimrehurek.com/gensim/ حيث يتوافر توثيق جيد لها.
+            
+            المعالجة الأولية النصوص :
+            
+            مهما كانت المهمة أو المعلومة التي تطمح لاستخلاصها في تطبيقك من الديوان النصي (corpus) بين يديك، فإنك غالبًا ستحتاج لمعالجة هذا النص أولا قبل أن تكون قادرا على تطبيق أي خوارزمية عليه؛ ذلك أن النص الخام يكون عشوائيا بلا أي هيكلية مما لا يسمح للخوارزميات بالتعامل معه، أضف إلى هذا الحجم الهائل له؛ لذا فإن المعالجات الأولية التي تتم على النص تهدف إلى التخفيض من حجمه بالتخلص من الضجيج فيه إضافة إلى خلق هيكلية أولية تمكن الخوارزميات من التعامل معه.
+            
+            سنناقش في هذا الجزء من الكتاب العمليات الثلاث الأكثر استخداما للمعالجة الأولية، بيد أن بعض الخوارزميات تتطلب معالجات إضافية تتنوع بحسب طبيعة الخوارزمية.
+            
+            استخلاص الوحدات اللغوية (Tokenization) :-
+            
+            هذه العملية وكما يقترح الاسم، تقوم بتقطيع النص الذي يكون مخزنا ضمن ذاكرة البرنامج كسلسلة نصية واحدة (String) إلى مصفوفة سلاسل (String Array) ، بكلمات أبسط يتم تقسيم النص إلى كلمات الفاصل بين الكلمات في معظم اللغات هو المسافة، لكنه قد يكون في بعض الأحيان أحرقا أو علامات ترقيم مثلا في اللغات الصينية لا يتم الفصل بين الكلمات على الإطلاق.
+            اللغة العربية الفاصل الأساسي ما بين الكلمات هو المسافة مما يجعل المهمة سهلة والمكان الاستعانة بصندوق أدوات اللغات لإتمام هذه المهمة. مرحبا من الذكاء الإصطناعي بالعربية " = sentence tokens =nitk.word_tokenize (sentence)
+            
+            والنتيجة ستكون بالشكل التالي:
+            
+            مرحبا "من" " الذكاء الإصطناعي بالعربية "
+            
+            تلاحظ أن النصوص العربية قد تطلب التخلص من السوابق واللواحق والوصول لأصل الكلمات (Lematization ) في معظم الحالات، وهي بذلك تتمايز عن اللغات اللاتينية مثلا كاللغة الإنكليزية حيث أن السوابق واللواحق العربية ذات أثر أكبر على النص العربي مما هي على النص باللغة الإنجليزية.  
+            
+            إزالة كلمات الوقف stop words :
+            
+            كما ذكرنا فإن النص يكون كبيرا ومليئا بالمفردات والكلمات العديدة، ومن الطبيعي أنها ليست كلها بذات القيمة فالكلمات التي تتكرر بشكل كبير ولا تحمل معنى بوجودها وحدها يتم اعتبارها ضجيجا وكلمات وقف يجب إزالتها، فالحروف والأدوات والضمائر في اللغة العربية مثل من، على أن هو هذه ... إلخ، تستخدم بكثرة وهي تشكل ضجيجا في النص ولذا من الأفضل استبعادها، والضجيج غير مقتصر فقط على الحروف والأدوات ففي بعض المجالات. بعض الكلمات تتردد بكثرة مما يحولها إلى كلمات وقف في المجال بحد ذاته وإن كانت في مجال أخر فلم يتم اعتبارها كذلك، فإن كان ديوان النص (corpus) الذي تعمل عليه هو عن الأخبار الرياضية مثلا فإن كلمات : كرة، لاعب ومباراة مثلا ستشكل ضجيجًا إذ أنها على الغالب ستظهر في كل خبر. 
+            ولكن دفاتركز على الحالة العامة ونكتفي بالحروف والأدوات حيث سوسا تا صدوق أدوات معالجة اللغات الطبيعية (NETK) بهذا إن أنه يوفر مجموعة كلمات وقف علمة لعدد من اللغات من حملها العربية والانجليزية، ولاستخدامها بإمكانك تطبيق الكود التالي:
+            
+            from nitk.corpus import stopwords stopwords = set (stopwords.words(arabic))
+            
+            for w in sentence:
+            
+            ifw not in stopWords:
+            
+            filteredSentences.append(w)
+            
+            والخرج سيكون بالشكل التالي:
+            
+            أمر حيا" الذكاء الإصطناعي بالعربية "
+            
+            إنشاء حقيبة الكلمات (bag of words) :
+            
+            حقيبة الكلمات هي طريقة بسيطة لتمثيل النصوص؛ إذ أنها تتجاهل ترتيب الكلمات والقواعد النحوية، وتركز على تشكيل مصفوفة ذات بعدين يمثل البعد الأول فيها الكلمة بينما يمثل البعد الثاني عدد مرات تكرار هذه الكلمة في مجموعة ( ديوان (corpus النصوص إنشاء حقيبة الكلمات هي مرحلة أساسية في الغالبية العظمى من الخوارزميات الإحصائية في معالجة النصوص، إذ يتم تطبيق الخوارزميات والنماذج الإحصائية عليها.
+            
+            يمكن الحصول على حقيبة الكلمات بالاستعانة بصندوق أدوات اللغات الطبيعية (NLTK) وكذلك من مكتبة جنسيم (Gensim) وللمثال هذه المرة فلنستخدم الأخيرة. 
+            from gensim.corpora import Dictionary dictionary = corpora. Dictionary (filteredSentence)
+            
+            corpus = Dictionary.doc2bow (filteredSentence)
+            
+            يقوم النموذج (Dictionary) أولا بإنشاء مصفوفة بكل الكلمات المتمايزة في الجملة، حيث تقابل كل كلمة بدليل، ثم يتم إنشاء حقيبة الكلمات إذ تكون عبارة عن مصفوفة من ثنائيات (pairs) يمثل الحد الأول فيها دليل الكلمة في القاموس (dictionary) أما الحد الثاني فيمثل عدد مرات ظهور هذه الكلمة في الجملة؛ وبالتالي فإننا لجملتنا السابقة ستحصل على الخرج. 
+            
+            التالي:
+            
+            [(0, 1), (1, 1), (2,1), (3,1))
+            
+            وللاطلاع على كلمات القاموس:
+            
+            print (dictionary.token2id)
+            
+            والخرج سيكون بالشكل التالي "مرحبا" 0, : الذكاء 1 : ' الإصطناعي 2:;بالعربية 3 :
+            
+            في البداية سنقوم بتنصيب مكتبتي معالجة النصوص Spacy و textacy على اعتبار أن بايثون ۳ موجود على الجهاز بشكل مسبق.
+            
+        `,
+
     },
     {
-        "id":7,
+        "id": 7,
+        "type": "lesson",
+        "title": "الدرس الثالث",
+        "video": "https://res.cloudinary.com/dtxava86t/video/upload/v1683583187/video/lesson7.mp4",
+        "sub-title": "عنوان فرعى",
+        "desc": `
+            Bright and flower, Indicating the beauty of nature and scenic terrain, It Is said that It was named (Sham) relative to Sam bin Noah, peace be upon him. The city of Damascus Is located in the southwestern part of the Syrian Republic, bordering the plains of Horan and the mountains of Qalamoun. The city Is surrounded by orchards of Ghouta, Rabwat Damascus, and Mount Qassioun. The city also overlooks the banks of the Barada River""""
+
+            •	Doc = nlp (text).
+
+            For entity in doc.ents:
+
+            Print (f" (entity.text) ((entity.label_})")
+
+            الخرج على الشكل التالي:
+            The Syrian Arab Republic (GPE)
+
+            . Syrian (NORP)
+
+            Damascus (GPE)
+
+            Seventh (ORDINAL)
+
+            Arramad (PERSON)
+
+            Nine thousand years (DATE)
+
+            Damascus (GPE)
+
+            . Assyrian (NORP)
+
+            Sham (PERSON)
+            Sam bin Noah (PERSON).
+
+            Damascus (GPE)
+
+            The Syrian Republic (GPE)
+
+            Horan (GPE)
+
+            Qalamoun (GPE).
+
+            Ghouta (GPE) .
+
+            Rabwat Damascus (PERSON)
+
+            Mount Qassioun (PERSON)
+
+            The Barada River (LOC)
+            تعتبر GpEعن الكيان الموقع الجغرافي LOC المكان Ordinalالعدد نلاحظ  أن إسناد بعض الكلمات الي  تسميتها كان خاطئا مثل إسناد ربوه دمشق الي Personشخص وجبل قاسيون الي Personشخص .
+            اذا كان النص يحتوي على كلمات فريده او مصطلحات مخصصه فلن يكون نموذج التعرف على الكيانات المسماه المبني في مكتبه بايثون SpaCyمدربا علي هذه الكلمات ولذلك لا بد لك من معايرة النموذج ليناسب كلماتك 
+            اذا تغيرت القوانين واردنا ان نزيل اسماء الاشخاص فالامر سيكلف الكثير من الوقت اذا تم عمله يدويا لذلك نقوم بازاله هذه الاسماء من خلال معالجه اللغات الطبيعيه من خلال كود البرمجه التالي
+
+
+            #Replace a token with "REDACTED" if It is a name
+
+            Def replace name with placeholder (token):
+            If token.ent_iob != 0 and token.ent_type_ ==
+
+            "PERSON":
+
+            Return "[REDACTED]"
+
+            Else:
+
+            Return token.string
+            نفحص في السطر ٣وجود الكيان المسمي PERSON''''شخص " لاستبداله بما يشير إليه 
+
+            "REDACTED“
+
+            #Loop through all the entities in a document and check If they are names
+
+            Def scrub (text):
+
+            Doc= nlp (text)
+
+            For ent in doc.ents:
+
+            Ent.merge()
+
+            Tokens = map(replace_name_with_placeholder,
+
+            Doc)
+
+            Return "" .join(tokens)
+            S="""
+
+            In 1950, Alan Turing published his famous article "Computing Machinery and Intelligence". In 1957, Noam Chomsky's
+            Syntactic Structures revolutionized Linguistics with 'universal grammar', a rule based system of syntactic structures.
+
+            Print (scrub (s))
+            وعند تنفيذ هذا الكود ستكون النتيجه :
+
+            In 1950, [REDACTED] published his famous article "Computing Machinery and Intelligence" in 1957 (REDACTED]
+
+            Syntactic Structures revolutionized Linguistics with 'universal grammar' rule based system of syntactic structures.
+
+        `,
+    },
+    {
+        "id": 8,
+        "type": "lesson",
+        "title": "الدرس الرابع",
+        "video": "https://res.cloudinary.com/dtxava86t/video/upload/v1683583187/video/lesson8.mp4",
+        "sub-title": "عنوان فرعى",
+        "desc": `
+            Fact extractionاستخلاص الحقائق:
+            يمكننا استخدام الخرج الناتج من Spacy كدخل الخوارزميات استخلاص البيانات الاكثر تعقيدا فمثلا لدينا مكتبهtextacy التي تنفذ عده خوارزميات استخلاص البيانات منها خوارزميه استخلاص العبارات النصف مهيكله Semi-Structured Statement Extraction  يمكننا استخدامها للبحث في شجره الاعراب الاعتمادي على عبارات بسيطه موضوعها دمشق
+            ويجب ان يساعدنا في ذلك العثور على حقائق حول دمشق
+            سنطبق الكود البرمجي التالي لتحقيق ذلك:
+            import textacy.extract  nlp = spacy.load('en_core_web_sm')  #The text we want to examine  text """Damascus is the capital of the Syrian Arab Republic and the most densely populated Syrian city; Damascus is one of the oldest. inhabited capitals in the world, and historians have suggested that the city's history dates back to before the seventh millennium B.C, Some of the excavations were found in the area of Tall Arramad, and these excavations indicate that the history of the city dates back to nine thousand years BC. The name (Damascus) dates back to ancient Assyrian origins and means the land full of bright and flower, indicating the beauty of nature and scenic terrain, It is said that it was named (Sham) relative to Sam bin Noah, peace be upon him. The city of Damascus is located in the southwestern part of the Syrian Republic, bordering the plains of Horan and the mountains of Qalamoun. The city is surrounded by orchards of Ghouta, Rabwat Damascus, and
+            Mount Qassioun. The city also overlooks the banks of the Barada River"""
+
+            # Parse the document with spaCy
+
+            Doc = nlp (text)
+
+            # Extract semi-structured statements
+
+            Statements =
+
+            Textacy.extract.semistructured statements (doc,
+
+            "Damascus")
+
+            # Print the results
+
+            Print("Here are the things I know about
+
+            Damascus: ")
+
+            For statement in statements:
+
+            Subject, verb, fact = statement
+
+            Print (f" (fact)")
+            سيكون الخرج كما يلي :
+            Here are the things I know about Damascus
+
+            The capital of the Syrian Arab Republic and the most densely populated Syrian city-
+            واذا قمنا بتنفيذ نفس الكود على جزء من نص مقاله عن دمشق Damascus"
+            فسنحصل على النتيجه التاليه: 
+            Here are the things I know about Damascus
+
+            A major cultural center of the Levant and the
+
+            Arab world-
+
+            The center of a large metropolitan area of 2.7
+
+            Million people (2004)
+            وللحصول على معلومات أكثر دقة، جرب تشغيل neuralcorer بشكل إضافي حيث أنها تعتمد في عملها على الشبكات العصبية ثم تنفيذ مرحلة القرار الجوهري ضمن تسلسل المعالجة فستحصل على معلومات موجودة في الجمل التي تحتوي على الضمير العائد إلى "دمشق"، وليس فقط المعلومات الموجودة في الجمل التي تحتوي "دمشق" بشكل مباشر
+            ماذا يمكن أن نفعل أيضا؟
+            من خلال الاطلاع على مستندات spacy ومحررات النصوص، سترى الكثير من الأمثلة على الطرق التي يمكنك من خلالها التعامل مع النصوص التي تم تحليلها. ما رأيناه حتى الآن
+            هو مجرد عينة صغيرة.
+            إليك مثال عملي أخر تخيل أنك تقوم بإنشاء موقع ويب يتيح للمستخدم عرض المعلومات لكل مدينة في العالم باستخدام المعلومات التي استخرجناها في المثال السابق. إذا كانت لديك ميزة بحث على موقع الويب، فقد يكون من الجيد الإكمال التلقائي لطلبات البحث
+            الشائعة مثل Google‏
+            ولكن للقيام بذلك، نحتاج إلى قائمة بالإكمالات الممكنة لاقتراحها على المستخدم. يمكننا استخدام
+            معالجة اللغات الطبيعية لتوليد هذه البيانات بسرعة
+            . فيما يلي طريقه لاستخراج اجزاء الاسماء التي يتم ذكرها بشكل متكرر من مستند:
+            Import spacy
+
+            Import textacy.extract
+
+            #Load the large English NLP model
+
+            Nlp = spacy.load('en_core_web_sm')
+
+            # The text we want to examine
+
+            Text="""Damascus Is the capital of the Syrian
+
+            Arab Republic and the most densely populated Syrian city; Damascus is one of the oldest inhabited capitals in the world, and historians have suggested that the city's history cates back to before the seventh millennium B.C,
+
+            Some of the excavations were found in the area
+
+            Of Tall Arramad, and these excavations indicate
+
+            That the history of the city dates back to nine
+
+            Thousand years BC.
+
+            The name (Damascus) dates back to ancient Assyrian origins and means the land full of bright and flower, indicating the beauty of
+
+            Nature and scenic terrain, It is said that it was named (Sham) relative to Sam bin Noah, peace be upon him. The city of
+            Damascus is located In the southwestern part of
+
+            The Syrian Republic, bordering the plains of Horan and the mountains of Qalamoun. The city is surrounded by orchards of Ghouta, Rabwat Damascus, and Mount Cassioun. The city also overlooks the banks of the Barada River"" # Parse the document with spacy
+
+            Doc = nlp (text)
+
+            #Extract noun chunks that appear noun chunks = textacy.extract.noun_chunks (doc, min_freg-3)
+
+            # Convert noun chunks to lowercase strings
+
+            Noun_chunks = map(str, noun_chunks) noun_chunks = map(str.lower, noun_chunks)
+
+            # Print out any nouns that are at least 2 words long
+
+            For noun chunk In set (noun_chunks):
+
+            If len (noun_chunk.split(" ")) > 1:
+
+            Print (noun_chunk)
+            اذا طبقنا هذا الكود البرمجي على المقطع النص المستخدم فلن نحصل على نتيجه لانه مقطع نصي قصير اذا اخذنا نصا اطول من مقاله ويكيبيديا سيكون الخرج
+            Barada river-
+
+            Simple tokenization with .split :-
+
+            As we mentioned before, this is the simplest method to perform tokenization in Python. If you type .split(), the text will be separated at each blank space.
+
+            For this and the following examples, we'll be using a text narrated by Steve Jobs In the "Think Different" Apple commercial.
+
+            Text = """Here's to the crazy ones, the misfits, the rebels, the troublemakers, the round pegs in the square holes. The ones who see things differently they're not fond of rules. You can quote them, disagree with them, glorify or vilify them, but the only thing you can't do Is ignore them because they change things. They push the human race forward, and while some may see them as the crazy ones, we see genius, becausee the ones who are crazy enough to think that they can change the world, are the ones who do."""text.split()
+
+            If we write the code above, we'll obtain the following output.
+
+            ['Here's', 'to', 'the', 'crazy', 'ones, ', 'the',
+
+            'the',
+
+            'misfits,', rebels,, 'the', troublemakers,', 'the', 'round', 'pegs', 'in', 'the', 'square', 'holes.', 'The', 'ones', 'who', 'see', 'things', 'differently', ', 'they' re', 'no', fond', 'of', 'rules.', 'You', 'can', 'quote', 'them, ', 'disagree', 'with', 'them, ', 'glorify', or', 'vilify, 'them, ', 'but', 'the', 'only', 'thing', 'you', 'can't', 'do', 'is', 'ignore', 'change', 'them', 'things.", 'because', 'they', 'They', 'push', 'the', 'human', 'race', 'forward,', 'and', 'some, 'crazy', 'may', 'see', 'ones, ', 'them', 'we', 'see', while', 'as', 'the', 'genius, 'becausee', 'the', 'ones', 'who', 'are', 'crazy', 'enough', 'to', 'think', 'that', 'they', 'can', 'change', 'the', 'world,', 'are', 'the', 'ones', 'who', 'do. '1
+
+            As you can see above, the split() method doesn't consider punctuation symbols as a separate token. This might change your project results
+            المراجع 
+            R. M. Tong, An operational system for detecting and tracking opinions in on-line discussion, Proceedings of the Workshop on Operational Text Classification (OTC), New Orleans, LO, 2011.
+
+            ⚫ P. Turney, Thumbs up or thumbs down? Semantic orientation applied to unsupervised classification of reviews, Proceedings of the Association for Computational Linguistics (ACL),
+
+            Philadelphia, PA, pp. 417-424, 2012. ⚫ X. Wan, Using bilingual knowledge and ensemble techniquesfor unsupervisedChinese sentiment analysis, Proceedings of EMNIPO8, Honolulu, HI, pp. 553-561, 2018. J.
+
+            ⚫ Wiebe, Learning subjective adjectives from corpora, Proceedings of AAAL, Austin, TX, 2018. J. Wiebe, R. F. Bruce, and T. P. O'Hara, Development and use of a gold standard data set for subjectivity classifications, Proceedings of the Association for Computational Linguistics (ACL), College Park, MD, pp. 246- 253, 2018.
+
+            J. Wiebe and R. Mihalcea, Word sense and subjectivity, Proceedings of the Conference on Computational Linguistics/Association for Computational Linguistics (COLING/ACL), Sydney, Australia, pp. 1065-1072, 2016.
+
+            Wiebe and T. Wilson, Learning to disambiguate potentially subjective expressions, Proceedings of the Conference on Natural
+
+            Language Learning (CoNLL), Taipei, Taiwan, pp. 112-118, 2016.
+
+            J. Wiebe, T. Wilson, and C. Cardie, Annotating expressions of opinions and emotions in language, Language Resources and Evaluation, 1(2), 165-210, 2014.
+
+            ⚫ J. Wiebe, T. Wilson, R. Bruce, M. Bell, and M. Martin, Learning subjective language, Computational Linguistics, 30, 277-308, 2014.
+
+            ⚫ T. Wilson, J. Wiebe, and R. Hwa, Just how mad are you? Finding strong and weak opinion clauses, Proceedings of AAAL, San Jose, CA, pp. 761-769, 2014.
+
+            ⚫ T. Wilson, J. Wiebe, and P. Hoffmann, Recognizing contextual polarity in phrase-level sentiment analysis, Proceedings of the Human Language Technology Conference and the Conference on Empirical Methods in Natural Language Processing (HLT/EMNLP), Vancouver, Canada, pp. 347-354, 2015.
+
+            H. Yang, L. Si, and J. Callan, Knowledge transfer and opinion detection in the TREC2016 blog track. Proceedings of TREC, Gaithersburg, MD, 2016.
+            ⚫ J. Yi, T. Nasukawa, R. Bunescu, and W. Niblack, Sentiment analyzer: Extracting sentiments about a given topic using natural language processing techniques, Proceedings of the IEEE International Conference on Data Mining (ICDM), Melbourne, FL, 2018.
+
+            H. Yu and V. Hatzivassiloglou, Towards answering opinion questions: Separating facts from opinions and Identifying the polarity of opinion sentences, Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP), Sapporo, Japan, 2018.
+
+
+        `,
+    },
+    {
+        "id":9,
         "type": "ques",
         "ques": [
-            [
-                "إجابة",
-                "الأول"
-            ],
-            [
-                "إجابة",
-                "الأول"
-            ],
-            [
-                "إجابة",
-                "الأول"
-            ],
-            true,
-            true,
-            true,
-            true,
-            "1",
-            "1",
-            "1",
+            {
+                "id": 0,
+                "ques": "هي المرحلة الثامنة من مراحل معالجه النصوص وهي تسمي القرار الجوهري",
+                "answer": "هى العلم الذي يجمع بين اللغة وعدد من مجالات علم الحاسب الآلى مثل : تعلم الآلة ، التعلم العميق،الشبكات العصبية الصناعية .",
+                "key": ["إجابة", "الأول"],
+                "notes": "هي المرحلة الثامنة من مراحل معالجه النصوص وهي تسمي القرار الجوهري"
+            },
+            {
+                "id": 1,
+                "ques": "ماهي الاشياء التي تستطيع أنظمة التعرف على الكيانات المسماة تسميتها ؟",
+                "answer": "إجابة السؤال الثاني",
+                "key": ["إجابة", "الأول"],
+                "notes": "اسماء الاشخاص/ اسماء الشركات/ المواقع الجغرافية/ اسماء المنتجات/ التاريخ والوقت/ اسماء الأحداث/ كميات النقود"
+            },
+            {
+                "id": 2,
+                "ques": "ما الهدف من مرحله الإعراب الاعتمادي ؟",
+                "answer": "إجابة السؤال الثالث",
+                "key": ["إجابة", "الأول"],
+                "notes": "ان الهدف من مرحله الإعراب الاعتمادي هو بناء شجره تعين كلمه أصل واحده لكل كلمه في الجملة وسيكون جذر الشجرة هو الفعل الرئيسي في الجملة"
+            },
+            {
+                "id": 3,
+                "ques": "ما هي المرحلة التي تكتشف فيها علاقات كلمات الجملة مع بعض البعض؟",
+                "answer": "إجابة السؤال الأول",
+                "key": ["إجابة", "الأول"],
+                "notes": "الإعراب الاعتمادي"
+            },
+            {
+                "id": 4,
+                "ques": "هل يوجد سلسله قياسيه لحروف التوقف مناسبه لكل التطبيقات ؟",
+                "answer": "إجابة السؤال الثاني",
+                "key": ["إجابة", "الأول"],
+                "notes": "لا يوجد وذلك لأن كلمات التوقف تختلف من تطبيق الي اخر"
+            },
+            {
+                "id": 5,
+                "ques": "ما المقصود ب ال  stop words ",
+                "answer": "إجابة السؤال الثالث",
+                "key": ["إجابة", "الأول"],
+                "notes": "هي الكلمات التي يجب حذفها من النص قبل البدء بأي عمليه إحصائية ويمكن تحديدها بإضافة سلسلة من الكلمات المعروفة. "
+            },
+            {
+                "id": 6,
+                "ques": "قم بشرح المرحلة الرابعة من مراحل معالجه النصوص NLP  ",
+                "answer": "إجابة السؤال الأول",
+                "key": ["إجابة", "الأول"],
+                "notes": "في هذه المرحلة تظهر الكلمة في اللغات الطبيعية بأشكال مختلفة مثل اضافه حرف sمثلا في اللغة الانجليزية للجمع وفي اللغة العربية تضاف أو تحذف حرف في علم الصرف "
+            },
+            {
+                "id": 7,
+                "ques": "ماهي مراحل معالجه النصوص ",
+                "answer": "إجابة السؤال الثاني",
+                "key": ["إجابة", "الأول"],
+                "notes": "•	الحصول على الوحدات لللغوية "
+            },
+            {
+                "id": 8,
+                "ques": "قم بشرح المرحلة الاولى من مراحل معالجه النصوص ",
+                "answer": "إجابة السؤال الثالث",
+                "key": ["إجابة", "الأول"],
+                "notes": "ان المرحلة الأولي من مراحل معالجه النصوص وهي عباره عن تقطيع النص الي الجمل المكون منها ومن النص السابق المدروس تكون الجمل وكل جمله من جمل النص يعبر عن فكره معينه كما هو الأمر بالنسبة لأي نص في اللغة الطبيعية "
+            },
+            {
+                "id": 9,
+                "ques": "تكلم عن مجموعة أدوات اللغات الطبيعية؟",
+                "answer": "إجابة السؤال الأول",
+                "key": ["إجابة", "الأول"],
+                "notes": "مكتبة مجانية مفتوحة المصدر تضمن المهام الأساسية في معالجة اللغات الطبيعيه والنصوص من الحصول على الوحدات اللغويه  إلى التجذيع وصولا تنبؤ بأقسام الكلام. والاستنتاج الدلالي وغيرها العديد من المهام اللغوية."
+            },
+            {
+                "id": 10,
+                "ques": "ماهى مكتبة جينسـم؟",
+                "answer": "إجابة السؤال الثاني",
+                "key": ["إجابة", "الأول"],
+                "notes": "مكتبة مجانية مفتوحة المصدر تتضمن توابع تساعد على تحديد التشابه الدلالي فيما بين النصوص. تتميز بشكل خاص بفعاليتها العالية مقارنة مع باقي المكتبات المفتوحة ما في هذا المجال تتحمل معالجة مجمعات نصية بأحجام كبيرة مع إدارة جيدة للذاكرة مبنية على أساس خوارزميات نمذجة فضاء المتجهات وخوارزميات نمذجة المواضيع."
+            },
+            {
+                "id": 11,
+                "ques": "ماهى استخلاص الوحدات اللغوية؟ ",
+                "answer": "إجابة السؤال الثالث",
+                "key": ["إجابة", "الأول"],
+                "notes": "هذه العملية تقوم بتقطيع النص الذي يكون مخزنا ضمن ذاكرة برنامجك سلسلة نصية واحدة إلى مصفوف السلاسل بكلمات أبسط يتم تقسيم النص إلى كلمات الفاصل بين الكلمات في معظم اللغات والمسافة، لكنه قد يكون في بعض الأحيان أحرف أو علامات ترقيم مثل اللغة الصينية لا يتم الفصل بين الكلمات على الإطلاق."
+            },
+            {
+                "id": 12,
+                "ques": "ماهى المعالجة الأولية للنصوص؟",
+                "answer": "هى العلم الذي يجمع بين اللغة وعدد من مجالات علم الحاسب الآلى مثل : تعلم الآلة ، التعلم العميق،الشبكات العصبية الصناعية .",
+                "key": ["إجابة", "الأول"],
+                "notes": "مهما كانت المهمة أو المعلومة التي تطمح لاستخلاص ها في تطبيقك من الديوان النصي بين يديك، فإنك غالبا ستحتاج لمعالجة هذا النص أولا قبل أن تكون قادرا على تطبيق أي خوارزمية عليه ذلك أن النص الخام يكون عشوائيا بلا أي هيكلة مما لا يسمح للخوارزميات بالتعامل معه. أضف إلى هذا الحجم الهائل هو.لذا فإن المعالجات الأولية التي تتم على النص تهدف إلى التخفيض من حجمه بالتخلص من الدقيق فيه إضافة إلى خلق هيكلية أولية تمكن الخوارزميات من التعامل معه. "
+            },
+            {
+                "id": 13,
+                "ques": "كيف تتم إزالة كلمات التوقف؟",
+                "answer": "إجابة السؤال الثاني",
+                "key": ["إجابة", "الأول"],
+                "notes": "وكما ذكرنا فإن النص قد يكون مليئا بالمفردات والكلمات العديد من الطبيعي أنها ليست كلها بذات القيمة. فالكلمات التي تتكرر بشكل كبير ولا تحمل معنى بوجودها وحدها يتم اعتبارها دقيقا وكلما توقفي يجب إزالتها فالحروف والأدوات والضمائر في اللغة الطبيعية. وذلك مثل مين  أنا. على. هو هذه. تستخدم بكثرة وهي تشكل دقيقا في النص ولذا من الأفضل استبعادها والدقيق غير مقتصر فقط على الحروف والأدوات. ففي بعض المجالات بعض الكلمات تتردد بكثرة مما يحولها إلى كلمات وقف في المجال بحد ذاته وإن كانت في مجال آخر فلم يتم اعتبارها كذلك."
+            },
+            {
+                "id": 14,
+                "ques": "كيف يتم إنشاء حقيبه الكلمات؟",
+                "answer": "إجابة السؤال الثالث",
+                "key": ["إجابة", "الأول"],
+                "notes": "هي طريقة بسيطة لتمثيل النصوص إذا أنها تتجاهل ترتيب الكلمات والقواعد النحوية تركز على تشكيل مصفوفة ذات بعدين يمثل البعد الأول في الكلمة بينما  يمثل البعد الثاني عدد مرات تكرار هذه الكلمة. وطعني إنشاء حقيبة هنا أن هي المرحلة أساسية في الغالبية العظمى من الخارج كميات الإحصائية في معالجة النصوص. زي يتم تطبيق الخوارزميات والنماذج الإحصائية عليها ويمكن الحصول على حقيبة الكلمات بالاستعانة بصندوق أدوات اللغات الطبيعية وكذلك في مكتبة جنسم. "
+            },
+            {
+                "id": 15,
+                "ques": "ماهى Nlp ؟",
+                "answer": "إجابة السؤال الأول",
+                "key": ["إجابة", "الأول"],
+                "notes": "في بايسون تتوفر هذه المكاتبات ومجموعات الأدوات بشكل عام في ال بايسون. ولهذا السبب تم تطوير غالبية مشاريع Nlp. في البايسون يسهل بيئة التطوير التفاعلية للبايسون في تطوير التعليمات. البرمجية الجديدة واختيارها.أما عن الجافا والسي بلس بلس. فهنا لمعالجة كميات كبيرة من البيانات غالبا ما يفضل استخدام السي بلس بلس والجبل أنها يمكن أن تدعم تعليمية برمجية أفضل و أكثر كفاءة."
+            },
+            {
+                "id": 16,
+                "ques": "ما هي معالجة النصوص؟",
+                "answer": "إجابة السؤال الثاني",
+                "key": ["إجابة", "الأول"],
+                "notes": "فرع من فروع معالجة اللغات الطبيعية ويعنى هذا الفرع بمعالجة اللغة المكتوبة بالذات. يشار إليك ذلك بتنقيب النصوص حيث تتمحور عمليات هذا الفرع من معالجة اللغات الطبيعية على أخذ النص الخام وتحويله إلى شكل يمكن للحاسب فهمه. واستخلاص معلومات منه كبني منطقية أو بيانات هيكلية."
+            },
+            {
+                "id": 17,
+                "ques": " مراحل معالجة اللغات الطبيعية؟",
+                "answer": "إجابة السؤال الثالث",
+                "key": ["إجابة", "الأول"],
+                "notes": "ملاحظة قبل المتابعه تجدر الاشاره الي ان هذه هي الخطوات في تسلسل معالجة اللغات الطبيعية نموذجية. فقد نتخطى بعض الخطوات أو نعيد ترتيب الخطوات اعتمادا على ما نريد القيام به، وكيفية تنفيذ مكتبات معالجة اللغات الطبيعية. وذلك بعض المكتبات مثل سبيسي. فهي تقوم بتنفيذ تجزئة الجمل بالاعتماد على النتيجة مرحلة الأعراب الاعتماد "
+            },
+            {
+                "id": 18,
+                "ques": "عمليات معالجة النصوص تكلم عنها؟",
+                "answer": "إجابة السؤال الأول",
+                "key": ["إجابة", "الأول"],
+                "notes": "النصوص هي المصدر الوحيد لتخزين المعلومات وتشاركها ومازالت لحد الآن هي كذلك رغم تنوع الكبير في وثائق ممكن استخدامها لنقل المعلومات. المصدر الأساسي لحفظ المعلومات بشتى أنواع إضافة إلى أهميتها. في التواصل مما يجعل عمليات استخلاص المعلومات من النصوص للنهائية بمقدار المعلومات الممكن حفظها فيها، فمن تحديد النصوص المتشابهة إلى تحديد توجه النص إيجابي أو سلبي وصولا إلى التخلص الآلي واستخلاص العناوين وغيرها الكثير."
+            },
+            {
+                "id": 19,
+                "ques": "استرجاع المعلومات ماذا تعرف عنها؟",
+                "answer": "إجابة السؤال الأول",
+                "key": ["إجابة", "الأول"],
+                "notes": "يتم فيها استخدام تقنيات معالجة النصوص للبحث والوصول إلى بيانات مكتوبة مثل كلمات أو عبارات أو غيرها من ديوان نص ما على الإنترنت أو دواوين شخصية."
+            },
+            {
+                "id": 20,
+                "ques": " التعرف على الإعلام اشرح؟",
+                "answer": "إجابة السؤال الثاني",
+                "key": ["إجابة", "الأول"],
+                "notes": "عملية التعرف على الأسماء الإعلام الأشخاص والأماكن والمؤسسات واستخلاصها"
+            },
+            {
+                "id": 21,
+                "ques": "تحليل الآراء اشرح؟ ",
+                "answer": "إجابة السؤال الثالث",
+                "key": ["إجابة", "الأول"],
+                "notes": "يهدف هذا التحليل لتحديد المعاني الكاملة في النص وليس الحقائق استكشاف المشاعر والتوجه في النص سواء إيجابي أو سلبي أو مهين."
+            },
+            {
+                "id": 22,
+                "ques": "كيف تتم عنقده النصـوص",
+                "answer": "إجابة السؤال الثالث",
+                "key": ["إجابة", "الأول"],
+                "notes": "هى عملية التعرف على النصوص المتشابهة وتجميعها معا."
+            },
+            {
+                "id": 23,
+                "ques": "ماذا تعرف عن AllenNlp  و Huggingface",
+                "answer": "إجابة السؤال الأول",
+                "key": ["إجابة", "الأول"],
+                "notes": "AllenNlp : هذه مكتبة من مكونات معالجة اللغة الطبيعية عالية المستوى التي يتم تنفيذها في البيسون Huggingface : تقوم هذه الشركة بتوزيع مئات من نماذج معالجة اللغة الطبيعية للتعلم العميق المختلف التي تم تدريبه مسبقا، بالإضافة إلى مجموعة أدوات برامج التوصيل والتشغيل في py Torch تمكن مطورين التقدم السريع لمدى جودة أداء النماذج المختلفة التي تم تدريب عليها"
+                
+            },
+            {
+                "id": 24,
+                "ques": "ماذا تعرفي عن مكتبة Spacy ؟ ",
+                "answer": "إجابة السؤال الثاني",
+                "key": ["إجابة", "الأول"],
+                "notes": "مكتبة مجانية ومفتوح للمصدر لمعالجة ملفات إن إللي بي المتقدمة في ال بايسون وقد تم تصميمها خصيصا للمساعدة في إنشاء التطبيقات التي يمكن معالجة كميات كبيرة من النصوص وفهمها. ومن المعروف أن السبايسي باتيه للغاية ويمكن التعامل مع العديد من المهام اللازمة في مشاريع معالجة اللغة الطبيعية مشتركة"
+            },
         ],
-        "innerHTML":`
-        <h1 class="title"> الامتحان </h1>
-        <form id="ques">
-        <div class="textarea">
-            <label for="ques-1"> السوال الأولى </label>
-            <textarea name="ques-1" id="ques-1"></textarea>
-        </div>
-        <div class="textarea">
-            <label for="ques-2"> السوال الثانى </label>
-            <textarea name="ques-2" id="ques-2"></textarea>
-        </div>
-        <div class="textarea">
-            <label for="ques-3"> السوال الثالث </label>
-            <textarea name="ques-3" id="ques-3"></textarea>
-        </div>
-        <div class="checkboxs">
-            <div class="checkbox">
-                <label for="ques-4" > السوال الرابع </label>
-                <input type="checkbox" name="ques-4" id="ques-4">
-            </div>
-            <div class="checkbox">
-                <label for="ques-5" > السوال الرابع </label>
-                <input type="checkbox" name="ques-5" id="ques-5">
-            </div>
-            <div class="checkbox">
-                <label for="ques-6" > السوال الرابع </label>
-                <input type="checkbox" name="ques-6" id="ques-6">
-            </div>
-            <div class="checkbox">
-                <label for="ques-7" > السوال الرابع </label>
-                <input type="checkbox" name="ques-7" id="ques-7">
-            </div>
-        </div>
-        <div class="radio">
-            <label for="ques-8"> السوال الثامن </label>
-            <div>
-                <input type="radio" name="ques-8" value="1" id="">
-                <label for="ques-8"> السوال الثامن </label>
-            </div>
-            <div>
-                <input type="radio" name="ques-8" value="2" id="">
-                <label for="ques-8"> السوال الثامن </label>
-            </div>
-            <div>
-                <input type="radio" name="ques-8" value="3" id="">
-                <label for="ques-8"> السوال الثامن </label>
-            </div>
-            <div>
-                <input type="radio" name="ques-8" value="4" id="">
-                <label for="ques-8"> السوال الثامن </label>
-            </div>
-        </div>
-        <div class="radio">
-            <label for="ques-8"> السوال الثامن </label>
-            <div>
-                <input type="radio" name="ques-9" value="1" id="">
-                <label for="ques-8"> السوال الثامن </label>
-            </div>
-            <div>
-                <input type="radio" name="ques-9" value="2" id="">
-                <label for="ques-8"> السوال الثامن </label>
-            </div>
-            <div>
-                <input type="radio" name="ques-9" value="3" id="">
-                <label for="ques-8"> السوال الثامن </label>
-            </div>
-            <div>
-                <input type="radio" name="ques-9" value="4" id="">
-                <label for="ques-8"> السوال الثامن </label>
-            </div>
-        </div>
-        <div class="radio">
-            <label for="ques-8"> السوال الثامن </label>
-            <div>
-                <input type="radio" name="ques-10" value="1" id="">
-                <label for="ques-8"> السوال الثامن </label>
-            </div>
-            <div>
-                <input type="radio" name="ques-10" value="2" id="">
-                <label for="ques-8"> السوال الثامن </label>
-            </div>
-            <div>
-                <input type="radio" name="ques-10" value="3" id="">
-                <label for="ques-8"> السوال الثامن </label>
-            </div>
-            <div>
-                <input type="radio" name="ques-10" value="4" id="">
-                <label for="ques-8"> السوال الثامن </label>
-            </div>
-        </div>
-        <div class="send">
-            <input id="send" type="submit" value="أرسل">
-        </div>
-    </form>
-    `
     },
-    
 ]
-
-// {
-//     "id":3,
-//     "type": "ques",
-//     "ques": [
-//         [
-//             "إجابة",
-//             "الأول"
-//         ],
-//         [
-//             "إجابة",
-//             "الأول"
-//         ],
-//         [
-//             "إجابة",
-//             "الأول"
-//         ],
-//         [
-//             "إجابة",
-//             "الأول"
-//         ],
-//         [
-//             "إجابة",
-//             "الأول"
-//         ],
-//         [
-//             "إجابة",
-//             "الأول"
-//         ],
-//         [
-//             "إجابة",
-//             "الأول"
-//         ],
-//         [
-//             "إجابة",
-//             "الأول"
-//         ],
-//         [
-//             "إجابة",
-//             "الأول"
-//         ],
-//         [
-//             "إجابة",
-//             "الأول"
-//         ]
-//     ],
-//     "notes":[
-//         "نص الملاحظة 1",
-//         "نص الملاحظة 2",
-//         "نص الملاحظة 3",
-//         "نص الملاحظة 4",
-//         "نص الملاحظة 5",
-//         "نص الملاحظة 6",
-//         "نص الملاحظة 7",
-//         "نص الملاحظة 8",
-//         "نص الملاحظة 9",
-//         "نص الملاحظة 10",
-//     ],
-//     "innerHTML":`
-//     <h1 class="title"> الامتحان </h1>
-//     <form id="ques">
-//     <div class="textarea">
-//         <label for="ques-1"> السوال الأولى </label>
-//         <textarea name="ques-1" id="ques-1"></textarea>
-//     </div>
-//     <div class="textarea">
-//         <label for="ques-2"> السوال الثانى </label>
-//         <textarea name="ques-2" id="ques-2"></textarea>
-//     </div>
-//     <div class="textarea">
-//         <label for="ques-3"> السوال الثالث </label>
-//         <textarea name="ques-3" id="ques-3"></textarea>
-//     </div>
-//     <div class="textarea">
-//         <label for="ques-4"> السوال الأولى </label>
-//         <textarea name="ques-4" id="ques-4"></textarea>
-//     </div>
-//     <div class="textarea">
-//         <label for="ques-5"> السوال الثانى </label>
-//         <textarea name="ques-5" id="ques-5"></textarea>
-//     </div>
-//     <div class="textarea">
-//         <label for="ques-6"> السوال الثالث </label>
-//         <textarea name="ques-6" id="ques-6"></textarea>
-//     </div>
-//     <div class="textarea">
-//         <label for="ques-7"> السوال الأولى </label>
-//         <textarea name="ques-7" id="ques-7"></textarea>
-//     </div>
-//     <div class="textarea">
-//         <label for="ques-8"> السوال الثانى </label>
-//         <textarea name="ques-8" id="ques-8"></textarea>
-//     </div>
-//     <div class="textarea">
-//         <label for="ques-9"> السوال الثالث </label>
-//         <textarea name="ques-9" id="ques-9"></textarea>
-//     </div>
-//     <div class="textarea">
-//         <label for="ques-10"> السوال الثالث </label>
-//         <textarea name="ques-10" id="ques-10"></textarea>
-//     </div>
-//     <div class="send">
-//         <input id="send" type="submit" value="أرسل" onsubmit="send()">
-//     </div>
-// </form>
-// `
-// }

@@ -54,7 +54,8 @@ const lesson = (item) => {
 
     const video = document.createElement("video");
     video.src = item.video;
-    video.name = "media"
+    video.name = "media";
+    video.controls = true;
 
     divVideo.append(video);
 
