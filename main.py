@@ -1,14 +1,31 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, json
+from pymongo import MongoClient
 from flask_cors import CORS
 from collections import defaultdict
-from gensim import corpora, models
+# from gensim import corpora, models
 from googletrans import Translator
 
+import json
+from bson import json_util
+
 app = Flask(__name__)
+
+client = MongoClient('mongodb+srv://ahmed:ahmed@cluster0.p3arxwz.mongodb.net/projectDB?retryWrites=true&w=majority')
+db = client.flask_db
+pro = db.pro
+# user = db.user
 
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 translator = Translator()
+@app.route("/show")
+def b():
+    # a= {}
+    # json.dumps(user.find()[0])
+    # return jsonify({"a": f"{json.loads(json.dumps(user.find()[0]))}"})
+    json_docs = [json.dumps(doc, default=json_util.default) for doc in pro.find({})]
+    docs = [json.loads(json_doc, object_hook=json_util.object_hook) for json_doc in json_docs]
+    return jsonify({"a": docs})
 
 @app.route("/")
 def room():
