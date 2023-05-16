@@ -4,6 +4,7 @@ from flask_cors import CORS
 from collections import defaultdict
 from gensim import corpora, models
 from googletrans import Translator
+from bson import json_util
 
 app = Flask(__name__)
 
@@ -21,7 +22,9 @@ def b():
     # json.dumps(user.find()[0])
     # return jsonify({"a": f"{json.loads(json.dumps(user.find()[0]))}"})
 
-    return jsonify({"a": f"{user.find()[0]}"})
+    # return jsonify({"a": f"{user.find()[0]}"})
+    documents = [json.loads(json_util.dumps(doc)) for doc in user.find()]
+    return jsonify(documents)
 
 @app.route("/")
 def room():
