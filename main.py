@@ -5,11 +5,12 @@ from collections import defaultdict
 from gensim import corpora, models
 from googletrans import Translator
 from bson import json_util
+from bson.json_util import dumps, loads
 
 app = Flask(__name__)
 
 client = MongoClient('mongodb+srv://ahmed:ahmed@cluster0.p3arxwz.mongodb.net/projectDB?retryWrites=true&w=majority')
-db = client.flask_db
+db = client.projectDB
 pro = db.pro
 user = db.user
 
@@ -23,7 +24,7 @@ def b():
     # return jsonify({"a": f"{json.loads(json.dumps(user.find()[0]))}"})
 
     # return jsonify({"a": f"{user.find()[0]}"})
-    documents = [json.loads(json_util.dumps(doc)) for doc in user.find()[0]["course"]]
+    documents = [json.loads(json_util.dumps(doc)) for doc in user.find()]
     return jsonify(documents)
 
 @app.route("/")
