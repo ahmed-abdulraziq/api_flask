@@ -23,7 +23,7 @@ def b():
     # return jsonify({"a": f"{json.loads(json.dumps(user.find()[0]))}"})
 
     # return jsonify({"a": f"{user.find()[0]}"})
-    documents = [json.loads(json_util.dumps(doc)) for doc in user.find()[0]]
+    documents = [json.loads(json_util.dumps(doc)) for doc in user.find()[0]["course"]]
     return jsonify(documents)
 
 @app.route("/")
