@@ -17,17 +17,6 @@ user =db.user
 
 cors = CORS(app, resources={r"*": {"origins": "*"}})
 
-cross_origin(
-origins = '*', 
-methods = ['GET', 'HEAD', 'POST', 'OPTIONS', 'PUT'], 
-headers = None, 
-supports_credentials = False, 
-max_age = None, 
-send_wildcard = True, 
-always_send = True, 
-automatic_options = False
-)
-
 translator = Translator()
 
 @app.route("/")
@@ -102,8 +91,7 @@ def quesId(id):
         "data" : res
         })
 
-@app.route("/check/<id>")
-@cross_origin()
+@app.route("/check/<id>", methods={"post"})
 def check(id):
     answer = []
     documents = json.loads(json_util.dumps(user.find_one({"id" : int(id)})))
