@@ -69,25 +69,37 @@ def showId(id):
 @app.route("/ques/<id>")
 def quesId(id):
     documents = json.loads(json_util.dumps(data.find({})))
+    user = json.loads(json_util.dumps(user.find({"course": "nlp"})))
 
-    arr = []
-    for item in documents:
-        if f"{item['ques']['id']}" == id:
-            res = item['ques']['ques']
-            for i in range(10):
-                arr.append(res[math.floor((len(res) / 10 * random.random()) + (len(res) / 10) * i)])
-    
-    ran = math.trunc(random.uniform(1,999))
-    
-    user.insert_one({'id': ran, 'body': arr})
+    if len(user['notes']) >= 5:
+        return jsonify({
+        "type" : "notes",
+        "data" : user['notes']
+        })
+    elif len(user['notes']) == 10:
+        return jsonify({
+        "type" : "full"
+        })
+    else:
+        arr = []
+        for item in documents:
+            if f"{item['ques']['id']}" == id:
+                res = item['ques']['ques']
+                for i in range(10):
+                    arr.append(res[math.floor((len(res) / 10 * random.random()) + (len(res) / 10) * i)])
+        
+        ran = math.trunc(random.uniform(1,999))
+        
+        # user.insert_one({'id': ran, 'body': arr})
+        user.update_one({'course': "nlp", 'id': id}, {"$set": {'notes': [], 'quses': arr}})
 
-    res = []
-    for item in arr:
-        res.append(item['ques'])
+        res = []
+        for item in arr:
+            res.append(item['ques'])
 
     return jsonify({
         "type" : "ques",
-        "id" : ran,
+        "id" : id,
         "data" : res
         })
 
