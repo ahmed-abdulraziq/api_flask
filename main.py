@@ -92,7 +92,7 @@ def quesId(id):
         
         ran = math.trunc(random.uniform(1,999))
         
-        user.update_one({'course': "nlp", 'id': id}, {"$set": {'notes': [], 'quses': arr}})
+        user.update_one({'course': "nlp", 'id': id}, {"$set": {'notes': [], 'ques': arr}})
 
         for item in arr:
             res.append(item['ques'])
