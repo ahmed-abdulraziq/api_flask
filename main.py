@@ -87,7 +87,7 @@ def quesId(id):
             if f"{item['ques']['id']}" == id:
                 index = item['ques']['ques']
                 for i in range(10):
-                    arr.append(index[math.floor((len(res) / 10 * random.random()) + (len(res) / 10) * i)])
+                    arr.append(index[math.floor((len(index) / 10 * random.random()) + (len(index) / 10) * i)])
         
         user.update_one({'course': "nlp", 'id': id}, {"$set": {'notes': [], 'ques': arr}})
         res = []
