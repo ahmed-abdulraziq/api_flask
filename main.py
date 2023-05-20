@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify, json
 from pymongo import MongoClient
 from flask_cors import CORS, cross_origin
 from collections import defaultdict
-from gensim import corpora, models
+# from gensim import corpora, models
 from googletrans import Translator
 from bson import json_util
 import math
@@ -69,16 +69,16 @@ def showId(id):
 @app.route("/ques/<id>")
 def quesId(id):
     documents = json.loads(json_util.dumps(data.find({})))
-    user = json.loads(json_util.dumps(user.find_one({'course': "nlp", 'id': int(id)})))
+    users = json.loads(json_util.dumps(user.find_one({'course': "nlp", 'id': int(id)})))
 
     res = []
 
-    if len(user['notes']) >= 5:
+    if len(users['notes']) >= 5:
         return jsonify({
         "type" : "notes",
-        "data" : user['notes']
+        "data" : users['notes']
         })
-    elif len(user['notes']) == 10:
+    elif len(users['notes']) == 10:
         return jsonify({
         "type" : "full"
         })
