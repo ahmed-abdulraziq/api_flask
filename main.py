@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify, json
 from pymongo import MongoClient
 from flask_cors import CORS, cross_origin
 from collections import defaultdict
-# from gensim import corpora, models
+from gensim import corpora, models
 from googletrans import Translator
 from bson import json_util
 import math
