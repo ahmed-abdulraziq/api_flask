@@ -69,7 +69,6 @@ def showId(id):
 @app.route("/ques/<id>")
 def quesId(id):
     documents = json.loads(json_util.dumps(data.find({})))
-    # ques = json.loads(json_util.dumps(data.find()))
 
     arr = []
     for item in documents:
@@ -99,41 +98,41 @@ def check(id):
     item = documents['body']
     arr = request.json['arr']
 
-    for index in range(len(item)):
-        documents = [
-            translator.translate(item[index]['notes'], dest='en').text,
-            translator.translate(item[index]['notes'], dest='en').text
-        ]
+    # for index in range(len(item)):
+    #     documents = [
+    #         translator.translate(item[index]['notes'], dest='en').text,
+    #         translator.translate(item[index]['notes'], dest='en').text
+    #     ]
 
-        stoplist = set('for a of the and to in'.split())
-        texts = [
-            [word for word in document.lower().split() if word not in stoplist]
-            for document in documents
-        ]
+    #     stoplist = set('for a of the and to in'.split())
+    #     texts = [
+    #         [word for word in document.lower().split() if word not in stoplist]
+    #         for document in documents
+    #     ]
 
-        frequency = defaultdict(int)
-        for text in texts:
-            for token in text:
-                frequency[token] += 1
+    #     frequency = defaultdict(int)
+    #     for text in texts:
+    #         for token in text:
+    #             frequency[token] += 1
 
-        texts = [
-            [token for token in text if frequency[token] > 1]
-            for text in texts
-        ]
+    #     texts = [
+    #         [token for token in text if frequency[token] > 1]
+    #         for text in texts
+    #     ]
 
-        dictionary = corpora.Dictionary(texts)
-        corpus = [dictionary.doc2bow(text) for text in texts]
+    #     dictionary = corpora.Dictionary(texts)
+    #     corpus = [dictionary.doc2bow(text) for text in texts]
 
-        lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=5)
+    #     lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=5)
 
-        doc = translator.translate(arr[index], dest='en').text
-        vec_bow = dictionary.doc2bow(doc.lower().split())
-        vec_lsi = lsi[vec_bow]
+    #     doc = translator.translate(arr[index], dest='en').text
+    #     vec_bow = dictionary.doc2bow(doc.lower().split())
+    #     vec_lsi = lsi[vec_bow]
 
-        if len(vec_lsi) == 0:
-            answer.append(item[index]['notes'])
+    #     if len(vec_lsi) == 0:
+    #         answer.append(item[index]['notes'])
 
-    return jsonify({ "answer": answer })
+    return jsonify({ "answer": arr, "item": item })
 
 
 @app.route("/ques", methods={"post"})
