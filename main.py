@@ -15,7 +15,7 @@ db = client.projectDB
 data =db.data
 user =db.user
 
-cors = CORS(app, resources={r"*": {"origins": "http://ques.up.railway.app"}})
+cors = CORS(app, resources={r"*": {"origins": "*"}})
 
 translator = Translator()
 
