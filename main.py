@@ -105,7 +105,7 @@ def quesId(id):
 def check(id):
     answer = []
     documents = json.loads(json_util.dumps(user.find_one({"id" : int(id)})))
-    item = documents['body']
+    item = documents['ques']
     arr = request.json['arr']
 
     for index in range(len(item)):
