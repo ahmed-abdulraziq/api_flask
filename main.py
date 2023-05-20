@@ -69,7 +69,7 @@ def showId(id):
 @app.route("/ques/<id>")
 def quesId(id):
     documents = json.loads(json_util.dumps(data.find({})))
-    user = json.loads(json_util.dumps(user.find_one({"course": "nlp", 'id': int(id)})))
+    user = json.loads(json_util.dumps(user.find_one({'course': "nlp", 'id': int(id)})))
 
     res = []
 
