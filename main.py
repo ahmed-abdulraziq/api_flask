@@ -15,7 +15,7 @@ db = client.projectDB
 data =db.data
 user =db.user
 
-cors = CORS(app, resources={r"/*": {"origins": "*"}})
+cors = CORS(app, resources={r"*": {"origins": "*"}})
 
 cross_origin(
 origins = '*', 
