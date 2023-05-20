@@ -131,6 +131,13 @@ def check(id):
 
         if len(vec_lsi) == 0:
             answer.append(item[index]['notes'])
+        
+        if len(answer) <= 5:
+            user.update_one({'course': "nlp"}, {"$set": {'notes': answer, 'quses': []}})
+        elif len(answer) == 0:
+            user.update_one({'course': "nlp"}, {"$set": {'notes': answer, 'quses': []}})
+        else:
+            return jsonify({ "answer": False })
 
     return jsonify({ "answer": answer })
 
