@@ -69,7 +69,7 @@ def showId(id):
 @app.route("/ques/<id>")
 def quesId(id):
     documents = json.loads(json_util.dumps(data.find({})))
-    user = json.loads(json_util.dumps(user.find({"course": "nlp"})))
+    user = json.loads(json_util.dumps(user.find_one({"course": "nlp"})))
 
     if len(user['notes']) >= 5:
         return jsonify({
