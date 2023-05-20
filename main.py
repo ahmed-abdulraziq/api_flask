@@ -102,7 +102,8 @@ def quesId(id):
         "data" : res
         })
 
-@app.route("/check/<id>", methods={"post"})
+@app.route("/check/<id>")
+@cross_origin()
 def check(id):
     answer = []
     documents = json.loads(json_util.dumps(user.find_one({"id" : int(id)})))
