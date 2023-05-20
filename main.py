@@ -90,7 +90,6 @@ def quesId(id):
         
         ran = math.trunc(random.uniform(1,999))
         
-        # user.insert_one({'id': ran, 'body': arr})
         user.update_one({'course': "nlp", 'id': id}, {"$set": {'notes': [], 'quses': arr}})
 
         res = []
