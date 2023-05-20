@@ -71,7 +71,6 @@ def quesId(id):
     documents = json.loads(json_util.dumps(data.find({})))
     users = json.loads(json_util.dumps(user.find_one({'course': "nlp", 'id': int(id)})))
 
-    res = []
 
     if len(users['notes']) >= 5:
         return jsonify({
@@ -86,22 +85,22 @@ def quesId(id):
         arr = []
         for item in documents:
             if f"{item['ques']['id']}" == id:
-                res = item['ques']['ques']
+                i = item['ques']['ques']
                 for i in range(10):
-                    arr.append(res[math.floor((len(res) / 10 * random.random()) + (len(res) / 10) * i)])
-        
-        ran = math.trunc(random.uniform(1,999))
+                    arr.append(i[math.floor((len(res) / 10 * random.random()) + (len(res) / 10) * i)])
         
         user.update_one({'course': "nlp", 'id': id}, {"$set": {'notes': [], 'ques': arr}})
 
+        res = []
+        
         for item in arr:
             res.append(item['ques'])
 
-    return jsonify({
-        "type" : "ques",
-        "id" : id,
-        "data" : res
-        })
+        return jsonify({
+            "type" : "ques",
+            "id" : id,
+            "data" : res
+            })
 
 @app.route("/check/<id>", methods={"post"})
 def check(id):
