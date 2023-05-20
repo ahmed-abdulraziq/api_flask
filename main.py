@@ -95,8 +95,8 @@ def quesId(id):
 def check(id):
     answer = []
     documents = json.loads(json_util.dumps(user.find_one({"id" : int(id)})))
-    item = documents['body']
-    arr = request.json['arr']
+    # item = documents['body']
+    # arr = request.json['arr']
 
     # for index in range(len(item)):
     #     documents = [
@@ -132,7 +132,7 @@ def check(id):
     #     if len(vec_lsi) == 0:
     #         answer.append(item[index]['notes'])
 
-    return jsonify({ "answer": arr, "item": item })
+    return jsonify({ "answer": documents })
 
 
 @app.route("/ques", methods={"post"})
