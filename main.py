@@ -143,11 +143,11 @@ def check(id):
             answer.append(item[index]['notes'])
         
         if len(answer) <= 5:
-            user.update_one({'course': "nlp"}, {"$set": {'notes': answer, 'quses': []}})
+            user.update_one({'course': "nlp"}, {"$set": {'notes': answer, 'ques': []}})
         elif len(answer) == 0:
-            user.update_one({'course': "nlp"}, {"$set": {'notes': answer, 'quses': []}})
+            user.update_one({'course': "nlp"}, {"$set": {'notes': answer, 'ques': []}})
         else:
-            return jsonify({ "answer": False })
+            return jsonify({ "answer": False, "id": id })
 
     return jsonify({ "answer": answer })
 
