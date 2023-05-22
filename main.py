@@ -72,28 +72,30 @@ def quesId(id):
     users = json.loads(json_util.dumps(user.find_one({'course': "nlp", 'id': int(id)})))
 
 
-    # if len(users['notes']) == 0:
-    #     return jsonify({
-    #     "type" : "full"
-    #     })
-    # elif len(users['notes']) <= 5:
-    #     return jsonify({
-    #     "type" : "notes",
-    #     "data" : users['notes']
-    #     })
-    # else:
-    arr = []
-    for item in documents:
-        if f"{item['ques']['id']}" == id:
-            index = item['ques']['ques']
-            for i in range(10):
-                arr.append(index[math.floor((len(index) / 10 * random.random()) + (len(index) / 10) * i)])
-    
-    user.update_one({'course': "nlp", 'id': int(id)}, {"$set": {'notes': [1,1,1,1,1,1], 'ques': arr}})
-    res = []
-    for item in arr:
-        res.append(item['ques'])
-    return jsonify({
+    if len(users['notes']) == 0:
+        return jsonify({
+        "type" : "full"
+        })
+    elif len(users['notes']) <= 5:
+        return jsonify({
+        "type" : "notes",
+        "data" : users['notes']
+        })
+    else:
+        arr = []
+        for item in documents:
+            if f"{item['ques']['id']}" == id:
+                index = item['ques']['ques']
+                for i in range(10):
+                    arr.append(index[math.floor((len(index) / 10 * random.random()) + (len(index) / 10) * i)])
+        
+        user.update_one({'course': "nlp", 'id': int(id)}, {"$set": {'notes': [1,1,1,1,1,1], 'ques': arr}})
+        res = []
+
+        for item in arr:
+            res.append(item['ques'])
+
+        return jsonify({
             "type" : "ques",
             "id" : id,
             "data" : res
