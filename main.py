@@ -89,7 +89,7 @@ def quesId(id):
                 for i in range(10):
                     arr.append(index[math.floor((len(index) / 10 * random.random()) + (len(index) / 10) * i)])
         
-        user.update_one({'course': "nlp", 'id': int(id)}, {"$set": {'notes': [], 'ques': arr}})
+        user.update_one({'course': "nlp", 'id': int(id)}, {"$set": {'notes': [1,1,1,1,1,1], 'ques': arr}})
         res = []
 
         for item in arr:
