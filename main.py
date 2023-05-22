@@ -142,7 +142,7 @@ def check(id):
         if len(vec_lsi) == 0:
             answer.append(item[index]['notes'])
 
-    user.update_one({'course': "nlp"}, {"$set": {'notes': answer}})
+    user.update_one({'course': "nlp", 'id': int(id)}, {"$set": {'notes': answer}})
 
     return jsonify({ "answer": answer, "id": id })
 
