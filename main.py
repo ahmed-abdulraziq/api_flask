@@ -72,7 +72,7 @@ def quesId(id):
     users = json.loads(json_util.dumps(user.find_one({'course': "nlp", 'id': int(id)})))
 
 
-    if len(users['notes']) >= 5:
+    if len(users['notes']) <= 5:
         return jsonify({
         "type" : "notes",
         "data" : users['notes']
