@@ -72,14 +72,14 @@ def quesId(id):
     users = json.loads(json_util.dumps(user.find_one({'course': "nlp", 'id': int(id)})))
 
 
-    if len(users['notes']) <= 5:
+    if len(users['notes']) == 0:
+        return jsonify({
+        "type" : "full"
+        })
+    elif len(users['notes']) <= 5:
         return jsonify({
         "type" : "notes",
         "data" : users['notes']
-        })
-    elif len(users['notes']) == 10:
-        return jsonify({
-        "type" : "full"
         })
     else:
         arr = []
@@ -141,13 +141,8 @@ def check(id):
 
         if len(vec_lsi) == 0:
             answer.append(item[index]['notes'])
-        
-    if len(answer) <= 5:
-        user.update_one({'course': "nlp"}, {"$set": {'notes': answer, 'ques': []}})
-    elif len(answer) == 0:
-        user.update_one({'course': "nlp"}, {"$set": {'notes': [], 'ques': []}})
-    else :
-        user.update_one({'course': "nlp"}, {"$set": {'notes': answer}})
+
+    user.update_one({'course': "nlp"}, {"$set": {'notes': answer}})
 
     return jsonify({ "answer": answer, "id": id })
 
